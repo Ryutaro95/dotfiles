@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+# Homebrewがなければインストール
+if [ ! -f /usr/local/bin/brew ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+brew bundle -v --file=~/dotfiles/Brewfile
+
+if [ ! -d ~/.config ]; then
+  mkdir ~/.config
+fi
+
+stow -v -d ~/dotfiles/packages -t ~ zsh neovim hyper
