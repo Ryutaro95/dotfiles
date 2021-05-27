@@ -1,16 +1,22 @@
 #!/bin/sh
+# execute permission command $ chmod +x install
 
 set -e
 
-# Homebrewがなければインストール
-if [ ! -f /usr/local/bin/brew ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# brew install
+if [ ! -e /usr/local/bin/brew ]; then
+	  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 brew bundle -v --file=~/dotfiles/Brewfile
 
+# Create a .config directory
 if [ ! -d ~/.config ]; then
-  mkdir ~/.config
+	mkdir ~/.config
 fi
 
-stow -v -d ~/dotfiles/packages -t ~ zsh neovim hyper
+if [ -e ~/.config/fish/fish_plugins ]; then
+  cd ~/
+	fisher update
+fi
+

@@ -1,2 +1,5 @@
-brew "stow"
-brew "neovim"
+brew 'fish'
+brew 'neovim'
+brew 'peco'
+brew 'ghq'
+brew 'fzf'
