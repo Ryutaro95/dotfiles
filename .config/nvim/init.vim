@@ -1,35 +1,55 @@
-
 set fenc=utf-8
-set termguicolors " TrueColorで表示
-set updatetime=100 "airblade/vim-gitgutter
-set showmatch " かっこ入力時の対応するかっこを表示
-" 行番号表示
 set number
-" タブ文字の代わりにスペースを使う
-set expandtab
-" タブはスペース2
-set tabstop=2
-" プログラミング言語に合わせてインデントを自動挿入
 set smartindent
-" 空白部分でtabキーやbackspaceを押した時にカーソル移動する幅
-set shiftwidth=2
-" 改行時に前行インデントを継承する
-set autoindent
-" 余計なtabや文末の空白を可視化
-set list
-set listchars=tab:»-,trail:-
-" yank した文字列をクリップボードにコピー
 set clipboard=unnamed
+set laststatus=2
+set showcmd
+set autoindent
+set smartcase
+set incsearch
+set wrapscan
+set list
 
 
-" テキスト背景色
-au ColorScheme * hi Normal ctermbg=none
-au ColorScheme * hi MatchParen cterm=bold ctermfg=214 ctermbg=black
-au Colorscheme * hi SpellBad ctermfg=23 cterm=none ctermbg=none
 
-set background=dark
+"""""""""""""""""""
+"" dein
+"""""""""""""""""""
+if &compatible
+  set nocompatible " Be iMproved
+endif
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" Required:
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+" Required:
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  let s:toml_dir = $HOME . '/.config/nvim'
+  let s:toml = s:toml_dir . '/dein.toml'
+
+  call dein#load_toml(s:toml, {})
+  " Let dein manage dein
+  " Required:
+  " call dein#add('/Users/ryutaro_takemura/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  " call dein#add('Shougo/neosnippet.vim')
+  " call dein#add('Shougo/neosnippet-snippets')
+
+  " You can specify revision/branch/tag.
+  " call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------

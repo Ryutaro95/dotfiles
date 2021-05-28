@@ -1,0 +1,1 @@
+/Users/ryutaro_takemura/dotfiles/.config/nvim/init.vim

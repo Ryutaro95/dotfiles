@@ -1,0 +1,4 @@
+[alias]
+	gra = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %C(cyan)%cn %C(magenta)%d %Creset%s'
+	stw = status -uno
+	diffw = diff --word-diff
