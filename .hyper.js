@@ -179,7 +179,8 @@ module.exports = {
     'hypercwd',
     'hyper-tab-icons-plus',
     // 'hyperterm-overlay',
-    'hyper-search'
+    'hyper-search',
+    'hyper-highlight-active-pane',
   ],
 
   // in development, you can create a directory under

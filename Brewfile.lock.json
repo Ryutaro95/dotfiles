@@ -31,7 +31,7 @@
         }
       },
       "neovim": {
-        "version": "0.4.4_2",
+        "version": "HEAD-cc1851c",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -187,9 +187,9 @@
       "catalina": {
         "HOMEBREW_VERSION": "3.1.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "9d35cec33fff45ccc2379156ea030238c71eed3d",
-        "CLT": "12.4.0.0.1.1610135815",
-        "Xcode": "12.4",
+        "Homebrew/homebrew-core": "38278d84eb4312adc23b30f1e49fffb0103a5439",
+        "CLT": "11.0.0.33.17",
+        "Xcode": "11.3.1",
         "macOS": "10.15.7"
       }
     }

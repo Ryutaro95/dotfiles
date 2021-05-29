@@ -17,7 +17,14 @@ eval (nodenv init - | source)
 set -x XDG_CONFIG_HOME $HOME/.config
 
 # Go
-# set -x GOPATH $HOME/go
-# set -x GO111MODULE=on
+set -x GOPATH $HOME/go
+set -x GO111MODULE on
+set -x GOBIN $GOPATH/bin
+
+# pyenv
+set -x PYENV_ROOT %HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin:$PATH
+eval (pyenv init - | source)
 
 set -U FZF_LEGACY_KEYBINDINGS 0
+
