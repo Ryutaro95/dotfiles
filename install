@@ -19,11 +19,8 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 ln -sf ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 ln -sf ~/dotfiles/.config/fish/fish_plugins ~/.config/fish/fish_plugins
-ln -sf ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf ~/dotfiles/.hyper.js ~/.hyper.js
 ln -sf ~/dotfiles/.gitconfig.alias ~/.gitconfig.alias
-ln -sf ~/dotfiles/.config/nvim/dein.toml ~/.config/nvim/dein.toml
-# ln -sf ~/dotfiles/.config/nvim/
 
 if [ -e ~/.config/fish/fish_plugins ]; then
   cd ~/

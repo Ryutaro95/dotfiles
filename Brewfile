@@ -1,6 +1,2 @@
 brew 'fish'
-brew 'neovim'
-brew 'peco'
-brew 'ghq'
-brew 'fzf'
-brew 'tmux'
+brew 'z'

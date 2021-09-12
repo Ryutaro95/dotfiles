@@ -1,1 +1,0 @@
-/Users/ryutaro_takemura/dotfiles/.config/fish/config.fish
