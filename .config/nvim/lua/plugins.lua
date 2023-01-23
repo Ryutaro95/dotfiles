@@ -40,6 +40,8 @@ return require('packer').startup(function()
         'numToStr/Comment.nvim',
     }
 
+    use ''
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'

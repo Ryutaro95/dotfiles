@@ -1,6 +1,6 @@
 require('onedark').setup {
     transparent = true,
-    -- term_color = false,
+    style = 'darker',
     -- diagnostics = {
     --     background = false,
     -- }

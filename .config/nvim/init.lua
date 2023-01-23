@@ -14,3 +14,5 @@ require 'plugins.mason'
 require 'plugins.hop'
 require 'plugins.onedark'
 -- require 'plugins.neosolarized'
+--
+-- vim.cmd[[colorscheme neosolarized]]

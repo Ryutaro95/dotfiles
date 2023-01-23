@@ -1,6 +1,7 @@
 local option = { noremap = true }
 
 vim.api.nvim_set_keymap('n', '<C-s>', '<Cmd>:w<cr>', option)
+vim.api.nvim_set_keymap('n', 'Qq', '<Cmd>:q!<cr>', option)
 vim.api.nvim_set_keymap('n', '<esc><esc>', ':noh<cr>', option)
 
 -- New tab

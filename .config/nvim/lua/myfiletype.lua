@@ -32,6 +32,10 @@ M.lua = function()
     set_indent(4, false)
 end
 
+M.markdown = function()
+    set_indent(8, false)
+end
+
 return setmetatable(M, {
     __index = function()
     return function()

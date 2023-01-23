@@ -25,11 +25,19 @@ end
 
 -- Indentation per language
 local my_filetype = require('myfiletype')
+-- Text wrap per file type
+local wrap_filetype = require('switch_wrap')
+
 vim.api.nvim_create_augroup('vimrc_augroup', {})
 vim.api.nvim_create_autocmd('FileType', {
   group = 'vimrc_augroup',
   pattern = '*',
   callback = function(args) my_filetype[args.match]() end
+})
+vim.api.nvim_create_autocmd('FileType', {
+  group = 'vimrc_augroup',
+  pattern = '*',
+  callback = function(args) wrap_filetype[args.match]() end
 })
 
 local has = vim.fn.has
