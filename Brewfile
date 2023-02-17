@@ -7,6 +7,7 @@ brew 'fish'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'libyaml'
+brew 'ccat'
 
 cask 'raycast'
 cask 'visual-studio-code'
