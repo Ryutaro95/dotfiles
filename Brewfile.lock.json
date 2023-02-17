@@ -538,6 +538,24 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "kindle": {
+        "version": "1.39.65301",
+        "options": {
+          "full_name": "kindle",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "cleanmymac": {
+        "version": "4.12.5,41205.0.2302100834",
+        "options": {
+          "full_name": "cleanmymac",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
