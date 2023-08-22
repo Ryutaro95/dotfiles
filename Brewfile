@@ -8,6 +8,8 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'libyaml'
 brew 'ccat'
+brew 'ripgrep'
+brew 'fd'
 
 cask 'raycast'
 cask 'visual-studio-code'
