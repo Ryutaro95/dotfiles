@@ -45,7 +45,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 mason.setup {}
 mason_null_ls.setup { automatic_setup = true }
 mason_lspconfig.setup {
-	ensure_installed = { 'sumneko_lua', 'gopls', 'rust_analyzer' }
+	ensure_installed = { 'lua_ls', 'gopls', 'rust_analyzer' }
 }
 
 mason_lspconfig.setup_handlers {

@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 	use {
 		'windwp/nvim-autopairs',
 	}
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     use {
         'nvim-neo-tree/neo-tree.nvim',
@@ -46,7 +47,10 @@ return require('packer').startup(function(use)
     }
 	use { 'nvim-telescope/telescope-file-browser.nvim' }
 
-    use 'lukas-reineke/indent-blankline.nvim'
+    -- インデント可視化
+    -- アニメーションでインデントを可視化出来るmini.indentscopeをお試し中
+    -- use 'lukas-reineke/indent-blankline.nvim'
+    use { 'echasnovski/mini.nvim', branch = 'stable' }
 
     use {
         'numToStr/Comment.nvim',

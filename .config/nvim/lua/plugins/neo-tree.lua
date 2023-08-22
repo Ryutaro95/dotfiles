@@ -9,4 +9,10 @@ require("neo-tree").setup {
   }
 }
 
-vim.keymap.set('n', ';b', '<Cmd>NeoTreeRevealToggle<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', ';b', '<Cmd>NeoTreeRevealToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', ';b', '<Cmd>Neotree toggle=true<CR>', {noremap = true, silent = true})
+
+-- # How to operate
+-- * New File or Directory: a
+-- * Delete: d
+-- * Seach: f
