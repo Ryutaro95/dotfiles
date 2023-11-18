@@ -14,6 +14,7 @@ if not vim.g.vscode then
     require 'plugins.hop'
     -- require 'plugins.onedarkk'
     require 'plugins.nvim-treesitter'
+    require 'plugins.lua-snip'
     require 'plugins.mini-indentscope'
     require 'plugins.catppuccin'
 end
