@@ -15,10 +15,13 @@ abbr -a ll exa -la --icons
 abbr -a cat bat -p
 abbr -a tree exa -la --icons -T
 abbr -a dcm docker-compose
-abbr -a ssh-gcloud gcloud compute ssh --zone "asia-northeast1-b" "ryutaro-instance-1" --project "skillful-skill-394710"
+abbr -a ssh-gcloud gcloud compute ssh --zone asia-northeast1-b ryutaro-instance-1 --project skillful-skill-394710
+abbr -a git-inital-commit git init && git add -A && git commit -m "Initial commit"
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc' ]
+    . '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc'
+end
