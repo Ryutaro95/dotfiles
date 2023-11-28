@@ -5,3 +5,4 @@
 local opt = vim.opt
 
 opt.relativenumber = false -- Absolute line numbers
+opt.tabstop = 4
