@@ -5,4 +5,16 @@
 local opt = vim.opt
 
 opt.relativenumber = false -- Absolute line numbers
-opt.tabstop = 4
+vim.api.nvim_exec(
+  [[
+  augroup go_settings
+    autocmd!
+    autocmd BufRead,BufNewFile *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+  augroup END
+]],
+  false
+)
+-- local function setup_go()
+--   opt.tabstop = 4
+--   opt.shiftwidth = 4
+-- end
