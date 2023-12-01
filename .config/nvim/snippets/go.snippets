@@ -1,0 +1,62 @@
+snippet errif "if error not nil, return err"
+	if err != nil {
+		return ${1}err
+	}
+	${2}
+
+snippet tdtStruct "table test function, struct"
+	func Test${1:${VISUAL}}(t *testing.T) {
+		cases:= []struct {
+			desc	string
+
+		}{
+			{
+				desc: "${2:test description}",
+
+			},
+		}
+		for _, case := range cases {
+			t.Run(case.desc, func(t *testing.T) {
+				${0:${VISUAL}}
+			})
+		}
+	}
+
+snippet tdtMap "table test function, map"
+	func Test${1:${VISUAL}}(t *testing.T) {
+		cases:= map[string]struct {
+      arg string
+		}{
+      "${1:test description}": {arg: "${2}"}
+		}
+		for desc, case := range cases {
+			t.Run(desc, func(t *testing.T) {
+				${0:${VISUAL}}
+			})
+		}
+	}
+
+snippet errwr "Error handling with fmt.Errorf"
+  if err != nil {
+      return fmt.Errorf("${1} %w", err)
+    }
+
+snippet pl "fmt.Println()"
+	fmt.Println(${1})
+
+snippet pf "fmt.Printf()"
+	fmt.Printf("%${1:s}\n", ${2:var})
+
+snippet lf "log printf"
+	log.Printf("%${1:s}", ${2:var})
+
+snippet lp "log println"
+	log.Println(${1})
+
+snippet enum "enum"
+  type ${1:Status} int
+  const (
+    ${2:NONE} ${3:Status} = iota
+    ${3:HOGE}
+    ${4:FUGA}
+  )
