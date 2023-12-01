@@ -19,6 +19,7 @@ abbr -a ssh-gcloud gcloud compute ssh --zone asia-northeast1-b ryutaro-instance-
 abbr -a gs git status
 abbr -a ga git add -A
 abbr -a gc git commit
+abbr -a dc docker compose
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
