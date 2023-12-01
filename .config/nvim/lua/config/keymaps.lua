@@ -4,6 +4,7 @@
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local Util = require("lazyvim.util")
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -28,3 +29,12 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Terminal Mappings
+-- local lazyterm = function()
+--   Util.terminal(nil, { cmd = Util.root() })
+-- end
+local lazyterm = function()
+  Util.terminal(nil, { cwd = Util.root() })
+end
+keymap.set("n", ";t", lazyterm, { desc = "Terminal (root dir)" })

@@ -56,14 +56,6 @@ return {
         desc = "Lists open buffers",
       },
       {
-        ";t",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.help_tags()
-        end,
-        desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-      },
-      {
         ";;",
         function()
           local builtin = require("telescope.builtin")
