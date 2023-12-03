@@ -10,6 +10,7 @@ brew 'libyaml'
 brew 'ccat'
 brew 'ripgrep'
 brew 'fd'
+brew 'starship'
 
 cask 'raycast'
 cask 'visual-studio-code'
