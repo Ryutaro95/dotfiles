@@ -28,3 +28,6 @@ status --is-interactive; and rbenv init - fish | source
 if [ -f '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc' ]
     . '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc'
 end
+
+# Starship - https://starship.rs/ja-JP/guide/
+starship init fish | source
