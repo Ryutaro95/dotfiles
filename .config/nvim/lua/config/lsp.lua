@@ -11,6 +11,7 @@ return {
         "typescript-language-server",
         "svelte-language-server",
         "css-lsp",
+        "ruby_ls",
       })
     end,
   },
