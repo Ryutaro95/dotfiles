@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# プロンプトの実行時間が遅いので 1000ms に変更
+# 実行時間は $ starship explain で確認
+command_timeout = 1000
 
 add_newline = true
 format = """
@@ -36,7 +39,7 @@ $time
 
 [character]
 # success_symbol = "[󱞪 ](bold green)"
-error_symbol = "[󰞇](bold red) "
+error_symbol = "[󰞇 ](bold red) "
 
 [os]
 format = "[$symbol](bold white)"

@@ -13,6 +13,7 @@ return {
         "sql",
         "svelte",
         "ruby",
+        "php",
       },
 
       -- matchup = {
