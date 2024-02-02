@@ -1,6 +1,5 @@
 cask_args appdir: "/Applications"
 brew 'git'
-brew 'exa'
 brew 'bat'
 brew 'neovim'
 brew 'fish'
@@ -12,11 +11,9 @@ brew 'ripgrep'
 brew 'fd'
 brew 'starship'
 
-cask 'raycast'
 cask 'visual-studio-code'
 cask 'docker'
 cask 'font-hack-nerd-font'
-cask 'kindle'
 cask 'cleanmymac'
 cask 'discord'
 cask 'iterm2'
