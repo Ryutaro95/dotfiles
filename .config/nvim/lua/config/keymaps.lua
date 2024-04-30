@@ -30,6 +30,9 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Oil.nvim File system
+keymap.set("n", ";o", ":Oil<Return>", { desc = "Open parent directory" })
+
 -- Terminal Mappings
 -- local lazyterm = function()
 --   Util.terminal(nil, { cmd = Util.root() })

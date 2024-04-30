@@ -4,8 +4,15 @@
 
 <Leader> = Space
 
-- NeoTree
-  Toggle: `<Leader> + e`
+- File system
+
+  - NeoTree
+    Toggle: `<Leader> + e`
+  - Oil
+    Toggle: `;o`
+    階層戻る: `-`
+    階層進む: `Return`
+    ファイルプレビュー: `<C-p>`
 
 - Split window
   縦分割: `sv`
