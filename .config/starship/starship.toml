@@ -16,27 +16,6 @@ $git_status\
 $cmd_duration\n\
 $character"""
 
-right_format = """
-$nix_shell\
-$nodejs\
-$python\
-$aws\
-$deno\
-$golang\
-$java\
-$kotlin\
-$lua\
-$nim\
-$php\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$time
-"""
-
-
 [character]
 # success_symbol = "[󱞪 ](bold green)"
 error_symbol = "[󰞇 ](bold red) "
