@@ -33,6 +33,10 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 -- Oil.nvim File system
 keymap.set("n", ";o", ":Oil<Return>", { desc = "Open parent directory" })
 
+-- Copy relative current file path
+local copy_file_path = require("scripts.copy_relative_filepath")
+keymap.set("n", "cp", copy_file_path.copy_relative_file_path, opts)
+
 -- Terminal Mappings
 -- local lazyterm = function()
 --   Util.terminal(nil, { cmd = Util.root() })
