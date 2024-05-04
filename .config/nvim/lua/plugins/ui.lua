@@ -78,9 +78,9 @@ return {
       })
     end,
   },
-
   {
     "folke/edgy.nvim",
+    event = "VeryLazy",
     opts = function()
       local opts = {
         bottom = {
