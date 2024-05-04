@@ -10,17 +10,16 @@ return {
       },
     },
   },
-  -- {
-  --   "nvim-neo-tree/neo-tree.nvim",
-  --   opts = {
-  --     sources = { "filesystem", "document_symbols" },
-  --     filesystem = {
-  --       filtered_items = {
-  --         hide_dotfiles = false,
-  --       },
-  --     },
-  --   },
-  -- },
+  {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
+    "RRethy/vim-illuminate",
+    opts = {
+      under_cursor = false,
+    },
+  },
   {
     "telescope.nvim",
     dependencies = {
