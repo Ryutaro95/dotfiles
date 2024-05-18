@@ -99,11 +99,6 @@ config = {
 			},
 		},
 	},
-	-- key_tables = {
-	-- 	copy_mode = {
-	-- 		{ key = "C", mods = "CTRL", action = wezterm.action.CopyMode({ SetSelectionMode = "Block" }) },
-	-- 	},
-	-- },
 }
 
 return config
