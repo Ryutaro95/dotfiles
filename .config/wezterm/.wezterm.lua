@@ -85,20 +85,6 @@ config = {
 			action = wezterm.action.SplitPane({ direction = "Down", size = { Percent = 30 } }),
 		},
 	},
-	key_tables = {
-		copy_mode = {
-			{
-				key = "y",
-				mods = "NONE",
-				action = act.Multiple({
-					act.CopyTo("PrimarySelection"),
-					wezterm.action.ClearSelection,
-					-- clear the selection mode, but remain in copy mode
-					wezterm.action.CopyMode({ "ClearSelectionMode" }),
-				}),
-			},
-		},
-	},
 }
 
 return config
