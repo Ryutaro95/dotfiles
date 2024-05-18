@@ -3,6 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "lua",
         "css",
         "fish",
         "gitignore",
@@ -15,10 +16,6 @@ return {
         "ruby",
         "php",
       },
-
-      -- matchup = {
-      -- 	enable = true,
-      -- },
 
       -- https://github.com/nvim-treesitter/playground#query-linter
       query_linter = {

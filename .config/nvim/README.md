@@ -4,6 +4,10 @@
 
 <Leader> = Space
 
+- LSP
+
+  - https://www.lazyvim.org/keymaps#lsp
+
 - File system
 
   - NeoTree

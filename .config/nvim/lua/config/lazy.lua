@@ -1,3 +1,4 @@
+local colorscheme = require("plugins.colorscheme")
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
@@ -12,7 +13,8 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "onedark",
+        -- colorscheme = "onedark",
+        colorscheme = "tokyodark",
         -- news = {
         --   lazyvim = true,
         --   neovim = true,
