@@ -15,6 +15,7 @@ abbr -a ll eza -alF --icons
 abbr -a cat bat -p
 abbr -a tree eza -alF --icons -T
 abbr -a dc docker compose
+abbr -a gui gitui
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
