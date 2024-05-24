@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 set PATH /opt/homebrew/bin $PATH
+set -x LANG ja_JP.UTF-8
 
 # Go
 set -x GOPATH $HOME/go

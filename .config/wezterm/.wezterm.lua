@@ -72,6 +72,8 @@ config = {
 	initial_rows = 60,
 	initial_cols = 150,
 	use_ime = true,
+	-- ↓ ctrl-h で変換済みの文字削除問題を解消してくれる
+	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
 
 	leader = { key = "t", mods = "CTRL", timeout_milliseconds = 1000 },
 	-- key maps
