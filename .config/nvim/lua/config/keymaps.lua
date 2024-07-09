@@ -41,3 +41,6 @@ local lazyterm = function()
   Util.terminal(nil, { cwd = Util.root() })
 end
 keymap.set("n", ";t", lazyterm, { desc = "Terminal (root dir)" })
+
+-- Show diagnostic message
+keymap.set("n", ";d", vim.diagnostic.open_float, opts)

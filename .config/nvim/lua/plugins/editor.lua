@@ -14,12 +14,12 @@ return {
     "folke/flash.nvim",
     enabled = false,
   },
-  {
-    "RRethy/vim-illuminate",
-    opts = {
-      under_cursor = false,
-    },
-  },
+  -- {
+  --   "RRethy/vim-illuminate",
+  --   opts = {
+  --     under_cursor = false,
+  --   },
+  -- },
   {
     "telescope.nvim",
     dependencies = {
@@ -173,4 +173,3 @@ return {
     end,
   },
 }
-
