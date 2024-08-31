@@ -1,19 +1,27 @@
 return {
-  "tiagovla/tokyodark.nvim",
-  name = "tokyodark",
-  opts = {
-    -- custom options here
-    transparent_background = true,
+  {
+    "Shatur/neovim-ayu",
+    config = function()
+      require("ayu").setup({
+        mirage = true,
+        overrides = {
+          Normal = { bg = "None" },
+          ColorColumn = { bg = "None" },
+          SignColumn = { bg = "None" },
+          Folded = { bg = "None" },
+          FoldColumn = { bg = "None" },
+          CursorLine = { bg = "None" },
+          CursorColumn = { bg = "None" },
+          WhichKeyFloat = { bg = "None" },
+          VertSplit = { bg = "None" },
+        },
+      })
+    end,
   },
-  config = function(_, opts)
-    require("tokyodark").setup(opts) -- calling setup is optional
-    vim.cmd([[colorscheme tokyodark]])
-  end,
-
-  -- "navarasu/onedark.nvim",
-  -- lazy = true,
-  -- opts = {
-  --   style = "cool",
-  --   transparent = true,
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "ayu",
+    },
+  },
 }
