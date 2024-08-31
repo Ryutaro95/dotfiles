@@ -86,6 +86,8 @@ config = {
 			mods = "CTRL",
 			action = wezterm.action.SplitPane({ direction = "Down", size = { Percent = 30 } }),
 		},
+		{ key = ",", mods = "CTRL", action = act.ActivateTabRelative(-1) },
+		{ key = ".", mods = "CTRL", action = act.ActivateTabRelative(1) },
 	},
 }
 
