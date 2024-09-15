@@ -8,6 +8,9 @@ local opts = { noremap = true, silent = true }
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+keymap.set("n", "<leader>m", function()
+  LazyVim.toggle.maximize()
+end, { desc = "Toggle Maximize Window" })
 
 local Util = require("lazyvim.util")
 local lazyterm = function()
