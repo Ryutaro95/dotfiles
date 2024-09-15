@@ -1,10 +1,9 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ui.edgy"
+
   ],
   "news": {
-    "NEWS.md": "6077",
-    "doc/news.txt": "13995"
+    "NEWS.md": "6077"
   },
   "version": 6
 }

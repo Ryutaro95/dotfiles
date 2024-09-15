@@ -1,25 +1,8 @@
 return {
   {
-    "Ryutaro95/clip-path",
-    keys = {
-      {
-        "cp",
-        function()
-          require("clip-path").copy_relative_file_path()
-        end,
-      },
-    },
-  },
-  {
     "folke/flash.nvim",
     enabled = false,
   },
-  -- {
-  --   "RRethy/vim-illuminate",
-  --   opts = {
-  --     under_cursor = false,
-  --   },
-  -- },
   {
     "telescope.nvim",
     dependencies = {
@@ -30,15 +13,6 @@ return {
       "nvim-telescope/telescope-file-browser.nvim",
     },
     keys = {
-      {
-        "<leader>fP",
-        function()
-          require("telescope.builtin").find_files({
-            cwd = require("lazy.core.config").options.root,
-          })
-        end,
-        desc = "Find Plugin File",
-      },
       {
         ";f",
         function()
@@ -59,22 +33,6 @@ return {
         desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
-        "\\\\",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.buffers()
-        end,
-        desc = "Lists open buffers",
-      },
-      -- {
-      --   ";;",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.resume()
-      --   end,
-      --   desc = "Resume the previous telescope picker",
-      -- },
-      {
         ";e",
         function()
           local builtin = require("telescope.builtin")
@@ -84,14 +42,6 @@ return {
       },
       {
         ";s",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.treesitter()
-        end,
-        desc = "Lists Function names, variables, from Treesitter",
-      },
-      {
-        "sf",
         function()
           local telescope = require("telescope")
 
