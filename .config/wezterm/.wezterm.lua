@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+
 local config = {}
 
 if wezterm.config_builder then
@@ -10,7 +11,7 @@ local act = wezterm.action
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
 
 config = {
-	window_background_opacity = 0.95,
+	window_background_opacity = 0.80,
 	macos_window_background_blur = 60,
 
 	-- color_scheme = "Tokyo Night Storm",
@@ -79,15 +80,22 @@ config = {
 	-- key maps
 
 	keys = {
-		{ key = "t", mods = "CTRL", action = act.PaneSelect({ alphabet = "kjhlnm" }) },
 		-- Split Pane
 		{
-			key = "S",
-			mods = "CTRL",
+			key = "s",
+			mods = "LEADER",
 			action = wezterm.action.SplitPane({ direction = "Down", size = { Percent = 30 } }),
 		},
+		{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 		{ key = ",", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = ".", mods = "CTRL", action = act.ActivateTabRelative(1) },
+		{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
+		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 	},
 }
 

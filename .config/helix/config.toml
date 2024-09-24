@@ -39,4 +39,6 @@ display-inlay-hints = true
 [editor.smart-tab]
 enable = true
 
+[editor.file-picker]
+hidden = false
 
