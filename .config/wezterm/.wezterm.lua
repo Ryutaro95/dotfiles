@@ -11,7 +11,7 @@ local act = wezterm.action
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
 
 config = {
-	window_background_opacity = 0.80,
+	window_background_opacity = 1,
 	macos_window_background_blur = 60,
 
 	-- color_scheme = "Tokyo Night Storm",
@@ -91,8 +91,8 @@ config = {
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-		{ key = ",", mods = "CTRL", action = act.ActivateTabRelative(-1) },
-		{ key = ".", mods = "CTRL", action = act.ActivateTabRelative(1) },
+		{ key = "[", mods = "CTRL", action = act.ActivateTabRelative(-1) },
+		{ key = "]", mods = "CTRL", action = act.ActivateTabRelative(1) },
 		{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },

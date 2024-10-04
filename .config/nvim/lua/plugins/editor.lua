@@ -1,7 +1,57 @@
+local macchiato = require("catppuccin.palettes").get_palette("macchiato")
 return {
+  {
+    "romgrk/barbar.nvim",
+    dependencies = {
+      -- "lewis6991/gitsigns.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    version = "^1.0.0",
+    init = function()
+      vim.g.barbar_auto_setup = false
+    end,
+    opts = {
+      sidebar_filetypes = {
+        ["neo-tree"] = true,
+      },
+    },
+  },
   {
     "folke/flash.nvim",
     enabled = false,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = {
+      size = 15,
+      open_mapping = [[<C-\>]],
+      shade_terminals = false,
+      highlights = {
+        Normal = {
+          guibg = macchiato.mantle,
+        },
+      },
+    },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+        },
+      },
+    },
+  },
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
   {
     "telescope.nvim",
