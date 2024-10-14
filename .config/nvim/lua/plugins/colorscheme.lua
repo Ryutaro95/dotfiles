@@ -1,19 +1,41 @@
 local macchiato = require("catppuccin.palettes").get_palette("macchiato")
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
+    "navarasu/onedark.nvim",
     opts = {
-      flavour = "macchiato",
-      color_overrides = {
-        LspInlayHint = { bg = macchiato.none },
-      },
+      transparent = true,
     },
-    -- require("catppuccin").setup({
-    --   flavour = "latte", -- latte, frappe, macchiato, mocha
-    -- }),
   },
+  -- {
+  --   "olimorris/onedarkpro.nvim",
+  --   priority = 1000, -- Ensure it loads first
+  --   -- opts = {
+  --   --   transparency = true,
+  --   -- },
+  --   config = function()
+  --     require("onedarkpro").setup({
+  --       options = {
+  --         transparency = true,
+  --       },
+  --     })
+  --   end,
+  -- },
+
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = "macchiato",
+  --     color_overrides = {
+  --       LspInlayHint = { bg = macchiato.none },
+  --     },
+  --   },
+  --   -- require("catppuccin").setup({
+  --   --   flavour = "latte", -- latte, frappe, macchiato, mocha
+  --   -- }),
+  -- },
+
   -- {
   --   "Shatur/neovim-ayu",
   --   config = function()
@@ -42,7 +64,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
+      -- colorscheme = "ayu",
+      colorscheme = "onedark",
     },
   },
 }

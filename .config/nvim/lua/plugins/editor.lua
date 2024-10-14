@@ -27,11 +27,11 @@ return {
       size = 15,
       open_mapping = [[<C-\>]],
       shade_terminals = false,
-      highlights = {
-        Normal = {
-          guibg = macchiato.mantle,
-        },
-      },
+      -- highlights = {
+      --   Normal = {
+      --     guibg = macchiato.mantle,
+      --   },
+      -- },
     },
   },
   {

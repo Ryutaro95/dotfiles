@@ -11,11 +11,11 @@ local act = wezterm.action
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
 
 config = {
-	window_background_opacity = 1,
+	window_background_opacity = 0.95,
 	macos_window_background_blur = 60,
 
 	-- color_scheme = "Tokyo Night Storm",
-	color_scheme = "Ayu Mirage",
+	color_scheme = "Dracula+",
 	colors = {
 		selection_fg = "none",
 		selection_bg = "rgba(50% 50% 50% 50%)",
@@ -43,17 +43,18 @@ config = {
 	},
 
 	-- Font settings
-	font = wezterm.font("Hack Nerd Font", {
-		stretch = "Normal",
-		style = "Normal",
+	font = wezterm.font_with_fallback({
+		{ family = "Hack Nerd Font", weight = "Regular" },
+		{ family = "HackGen35 Console", weight = "Regular" },
 	}),
 
-	window_padding = {
-		left = 30,
-		right = 30,
-		top = 60,
-		bottom = 0,
-	},
+	-- Text
+	font_size = 16,
+	freetype_load_target = "Light",
+	freetype_render_target = "HorizontalLcd",
+	line_height = 1.2,
+	initial_rows = 60,
+	initial_cols = 150,
 
 	-- general options
 	adjust_window_size_when_changing_font_size = false,
@@ -64,14 +65,13 @@ config = {
 	-- Window
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "RESIZE",
+	window_padding = {
+		left = 30,
+		right = 30,
+		top = 60,
+		bottom = 0,
+	},
 
-	-- Text
-	font_size = 13,
-	cell_width = 1.1,
-	line_height = 1.3,
-
-	initial_rows = 60,
-	initial_cols = 150,
 	use_ime = true,
 	-- ↓ ctrl-h で変換済みの文字削除問題を解消してくれる
 	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
