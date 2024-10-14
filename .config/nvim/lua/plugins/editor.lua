@@ -64,7 +64,7 @@ return {
     },
     keys = {
       {
-        ";f",
+        ";F",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
@@ -127,6 +127,7 @@ return {
         mappings = {
           n = {},
         },
+        file_ignore_patterns = { "*/node_modules/*", "*/.git/*", "*/target/*" },
       })
       opts.pickers = {
         diagnostics = {
