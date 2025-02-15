@@ -1,4 +1,4 @@
-local macchiato = require("catppuccin.palettes").get_palette("macchiato")
+-- local macchiato = require("catppuccin.palettes").get_palette("macchiato")
 return {
   -- {
   --   "Shatur/neovim-ayu",
@@ -24,27 +24,42 @@ return {
   --     })
   --   end,
   -- },
+
+  -- {
+  --   "projekt0n/github-nvim-theme",
+  --   name = "github-theme",
+  --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     require("github-theme").setup({
+  --       options = {
+  --
+  --         transparent = true,
+  --       },
+  --     })
+  --
+  --     -- vim.cmd("colorscheme github_dark")
+  --   end,
+  -- },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     -- colorscheme = "ayu",
+  --     colorscheme = "github_dark",
+  --   },
+  -- },
+
   {
-    "projekt0n/github-nvim-theme",
-    name = "github-theme",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require("github-theme").setup({
-        options = {
-
-          transparent = true,
-        },
-      })
-
-      -- vim.cmd("colorscheme github_dark")
-    end,
+    "navarasu/onedark.nvim",
+    opts = {
+      style = "cool",
+      transparent = true,
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "ayu",
-      colorscheme = "github_dark",
+      colorscheme = "onedark",
     },
   },
 }
