@@ -11,7 +11,7 @@ local act = wezterm.action
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
 
 config = {
-	window_background_opacity = 0.95,
+	-- window_background_opacity = 0.95,
 	macos_window_background_blur = 60,
 
 	-- color_scheme = "Tokyo Night Storm",
