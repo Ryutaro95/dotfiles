@@ -11,6 +11,9 @@ set -x PATH $PATH $GOPATH/bin
 # Rust
 set -U fish_user_paths $fish_user_paths $HOME/.cargo/bin
 
+# Deno
+set -U fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
+
 abbr -a vim nvim
 abbr -a ll eza -alF --icons
 abbr -a cat bat -p

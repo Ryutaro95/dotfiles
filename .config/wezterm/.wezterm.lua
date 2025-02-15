@@ -49,7 +49,7 @@ config = {
 	}),
 
 	-- Text
-	font_size = 16,
+	font_size = 15,
 	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
 	line_height = 1.2,
