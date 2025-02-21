@@ -53,8 +53,8 @@ config = {
 	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
 	line_height = 1.2,
-	initial_rows = 60,
-	initial_cols = 150,
+	initial_rows = 32,
+	initial_cols = 120,
 
 	-- general options
 	adjust_window_size_when_changing_font_size = false,
@@ -68,8 +68,8 @@ config = {
 	window_padding = {
 		left = 30,
 		right = 30,
-		top = 60,
-		bottom = 0,
+		top = 20,
+		bottom = 20,
 	},
 
 	use_ime = true,
