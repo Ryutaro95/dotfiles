@@ -36,7 +36,7 @@ return {
     opts = {
       options = {
         -- globalstatus = false,
-        theme = "horizon",
+        theme = "nordic",
       },
     },
   },

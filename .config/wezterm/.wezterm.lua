@@ -9,6 +9,8 @@ end
 local act = wezterm.action
 
 -- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
+-- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+-- tabline.setup({})
 
 config = {
 	-- window_background_opacity = 0.95,
@@ -21,16 +23,16 @@ config = {
 		selection_bg = "rgba(50% 50% 50% 50%)",
 
 		-- Tab style
-		tab_bar = {
-			active_tab = {
-				bg_color = "#E95678",
-				fg_color = "#1E1E32",
-			},
-			inactive_tab = {
-				bg_color = "#2E303E",
-				fg_color = "#646482",
-			},
-		},
+		-- tab_bar = {
+		-- 	active_tab = {
+		-- 		bg_color = "#E95678",
+		-- 		fg_color = "#1E1E32",
+		-- 	},
+		-- 	inactive_tab = {
+		-- 		bg_color = "#2E303E",
+		-- 		fg_color = "#646482",
+		-- 	},
+		-- },
 	},
 
 	-- Tab
@@ -43,10 +45,10 @@ config = {
 	},
 
 	-- Font settings
-	font = wezterm.font_with_fallback({
-		{ family = "Hack Nerd Font", weight = "Regular" },
-		{ family = "HackGen35 Console", weight = "Regular" },
-	}),
+	-- font = wezterm.font_with_fallback({
+	-- 	{ family = "Hack Nerd Font", weight = "Regular" },
+	-- 	{ family = "HackGen35 Console", weight = "Regular" },
+	-- }),
 
 	-- Text
 	font_size = 15,
