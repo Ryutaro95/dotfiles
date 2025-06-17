@@ -3,7 +3,50 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        ruby_lsp = {},
+        ruby_lsp = {
+          mason = false,
+          cmd = { "ruby-lsp" },
+          settings = {
+            rubyLsp = {
+              enabledFeatures = {
+                "codeActions",
+                "codeLens",
+                "completion",
+                "definition",
+                "diagnostics",
+                "documentHighlight",
+                "documentLink",
+                "documentSymbol",
+                "foldingRange",
+                "formatting",
+                "hover",
+                "inlayHint",
+                "onTypeFormatting",
+                "selectionRange",
+                "semanticHighlighting",
+                "signatureHelp",
+                "typeHierarchy",
+                "workspaceSymbol",
+              },
+              featuresConfiguration = {
+                inlayHint = {
+                  enableAll = true,
+                },
+              },
+            },
+          },
+          on_attach = function(client, bufnr)
+            -- Format on save for Ruby files
+            if client.name == "ruby_lsp" then
+              vim.api.nvim_create_autocmd("BufWritePre", {
+                buffer = bufnr,
+                callback = function()
+                  vim.lsp.buf.format({ async = false })
+                end,
+              })
+            end
+          end,
+        },
         denols = {
           root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
         },
