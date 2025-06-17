@@ -8,6 +8,9 @@ return {
       opts.ensure_installed = {
         "bash",
         "embedded_template",
+        "go",
+        "gomod",
+        "gowork",
         "html",
         "javascript",
         "json",
