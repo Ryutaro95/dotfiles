@@ -1,30 +1,18 @@
 -- local macchiato = require("catppuccin.palettes").get_palette("macchiato")
 return {
   -- {
-  --   "sainnhe/gruvbox-material",
+  --   "AlexvZyl/nordic.nvim",
   --   lazy = false,
   --   priority = 1000,
   --   config = function()
-  --     -- Optionally configure and load the colorscheme
-  --     -- directly inside the plugin declaration.
-  --     vim.g.gruvbox_material_enable_italic = true
-  --     vim.cmd.colorscheme("gruvbox-material")
+  --     require("nordic").setup({
+  --       -- transparent = {
+  --       --   bg = true,
+  --       -- },
+  --     })
+  --     require("nordic").load()
   --   end,
   -- },
-
-  {
-    "AlexvZyl/nordic.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("nordic").setup({
-        -- transparent = {
-        --   bg = true,
-        -- },
-      })
-      require("nordic").load()
-    end,
-  },
 
   -- {
   --   "Shatur/neovim-ayu",
@@ -76,17 +64,17 @@ return {
   --   },
   -- },
 
-  -- {
-  --   "navarasu/onedark.nvim",
-  --   opts = {
-  --     style = "cool",
-  --     transparent = true,
-  --   },
-  -- },
+  {
+    "navarasu/onedark.nvim",
+    opts = {
+      style = "cool",
+      transparent = true,
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "onedark",
+      colorscheme = "onedark",
       -- colorscheme = "ayu",
       -- colorscheme = "github_dark",
     },

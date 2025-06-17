@@ -14,6 +14,9 @@ set -U fish_user_paths $fish_user_paths $HOME/.cargo/bin
 # Deno
 set -U fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
 
+# Claude Code
+set -gx PATH ~/.npm-global/bin $PATH
+
 abbr -a vim nvim
 abbr -a ll eza -alF --icons
 abbr -a cat bat -p

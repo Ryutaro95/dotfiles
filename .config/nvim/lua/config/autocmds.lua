@@ -10,3 +10,21 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.expandtab = false -- タブをスペースに変換しない
   end,
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.spell = false
+  end,
+})
+
+-- LSP diagnostic configuration
+vim.diagnostic.config({
+  float = {
+    wrap = true,
+    max_width = math.floor(vim.o.columns * 0.8),
+    max_height = math.floor(vim.o.lines * 0.5),
+  },
+  virtual_text = {
+    wrap = true,
+  },
+})

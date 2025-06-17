@@ -64,7 +64,7 @@ return {
     },
     keys = {
       {
-        ";F",
+        ";Ff",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({

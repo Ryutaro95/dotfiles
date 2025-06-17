@@ -17,7 +17,8 @@ config = {
 	macos_window_background_blur = 60,
 
 	-- color_scheme = "Tokyo Night Storm",
-	color_scheme = "Dracula+",
+	-- color_scheme = "Dracula+",
+	color_scheme = "One Dark (Gogh)",
 	colors = {
 		selection_fg = "none",
 		selection_bg = "rgba(50% 50% 50% 50%)",
@@ -45,10 +46,10 @@ config = {
 	},
 
 	-- Font settings
-	-- font = wezterm.font_with_fallback({
-	-- 	{ family = "Hack Nerd Font", weight = "Regular" },
-	-- 	{ family = "HackGen35 Console", weight = "Regular" },
-	-- }),
+	font = wezterm.font_with_fallback({
+		{ family = "Hack Nerd Font", weight = "Regular" },
+		{ family = "HackGen35 Console", weight = "Regular" },
+	}),
 
 	-- Text
 	font_size = 15,
