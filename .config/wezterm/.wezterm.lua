@@ -18,7 +18,7 @@ config = {
 
 	-- color_scheme = "Tokyo Night Storm",
 	-- color_scheme = "Dracula+",
-	color_scheme = "One Dark (Gogh)",
+	color_scheme = "OneDark (base16)",
 	colors = {
 		selection_fg = "none",
 		selection_bg = "rgba(50% 50% 50% 50%)",
