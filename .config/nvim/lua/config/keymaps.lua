@@ -23,6 +23,12 @@ local lazyterm = function()
 end
 keymap.set("n", ";t", lazyterm, { desc = "Terminal (root dir)" })
 
+vim.keymap.set("n", "<leader>fp", function()
+  local path = vim.fn.expand("%")
+  vim.fn.setreg("+", path)
+  print("Copied: " .. path)
+end, { desc = "Print file path" })
+
 -- Show diagnostic message float
 keymap.set("n", ";d", vim.diagnostic.open_float, opts)
 
