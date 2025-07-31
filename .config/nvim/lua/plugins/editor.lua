@@ -42,7 +42,37 @@ return {
           hide_dotfiles = false,
         },
       },
+      window = {
+        width = 30,
+      },
     },
+    config = function(_, opts)
+      require("neo-tree").setup(opts)
+
+      -- ColorSchemeイベント後にハイライトを設定
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+          -- onedark coolスタイルのベース色
+          local base_bg = "#282c34"
+          -- 少し暗くした色
+          local neo_tree_bg = "#1e2227"
+          
+          vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = neo_tree_bg })
+          vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = neo_tree_bg })
+          vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = neo_tree_bg })
+          vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { bg = neo_tree_bg, fg = neo_tree_bg })
+        end,
+      })
+      
+      -- 初回読み込み時にも適用
+      vim.schedule(function()
+        local neo_tree_bg = "#1e2227"
+        vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = neo_tree_bg })
+        vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = neo_tree_bg })
+        vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = neo_tree_bg })
+        vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { bg = neo_tree_bg, fg = neo_tree_bg })
+      end)
+    end,
   },
   {
     "stevearc/oil.nvim",
