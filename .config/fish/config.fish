@@ -23,6 +23,7 @@ abbr -a cat bat -p
 abbr -a tree eza -alF --icons -T
 abbr -a dc docker compose
 abbr -a gui gitui
+abbr -a lg lazygit
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
