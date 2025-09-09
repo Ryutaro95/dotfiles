@@ -25,22 +25,15 @@ config = {
 	},
 	color_scheme = color_scheme_name,
 
-	-- Font settings（リガチャ無効化）
-	--  => == !=
-	font = wezterm.font("JetBrains Mono", {
+	-- Font settings
+	font = wezterm.font("JetBrains Mono NL", {
 		weight = "Regular",
-		harfbuzz_features = { "calt=0", "clig=0", "liga=0" }, -- リガチャを無効化
 	}),
-	-- font = wezterm.font_with_fallback({
-	-- 	{ family = "Hack Nerd Font", weight = "Regular" },
-	-- 	{ family = "HackGen35 Console", weight = "Regular" },
-	-- }),
 
 	-- Text
 	font_size = 13,
 	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
-	-- line_height = 1.2,
 	initial_rows = 32,
 	initial_cols = 120,
 
