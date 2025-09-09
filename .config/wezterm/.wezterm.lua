@@ -1,80 +1,54 @@
 local wezterm = require("wezterm")
-
 local config = {}
-
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
-
 local act = wezterm.action
 
--- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width) end)
--- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
--- tabline.setup({})
+-- カラースキームの名前を変数に保存
+local color_scheme_name = "OneDark (base16)"
 
 config = {
-	-- window_background_opacity = 0.95,
+	-- Window settings
+	window_decorations = "RESIZE|INTEGRATED_BUTTONS",
+	window_background_opacity = 0.96,
 	macos_window_background_blur = 60,
-
-	-- color_scheme = "Tokyo Night Storm",
-	-- color_scheme = "Dracula+",
-	color_scheme = "OneDark (base16)",
-	colors = {
-		selection_fg = "none",
-		selection_bg = "rgba(50% 50% 50% 50%)",
-
-		-- Tab style
-		-- tab_bar = {
-		-- 	active_tab = {
-		-- 		bg_color = "#E95678",
-		-- 		fg_color = "#1E1E32",
-		-- 	},
-		-- 	inactive_tab = {
-		-- 		bg_color = "#2E303E",
-		-- 		fg_color = "#646482",
-		-- 	},
-		-- },
+	window_close_confirmation = "NeverPrompt",
+	window_padding = {
+		left = 20,
+		right = "0.5cell",
+		top = "0.5cell",
+		bottom = "0.5cell",
 	},
-
-	-- Tab
-	tab_bar_at_bottom = true,
-	hide_tab_bar_if_only_one_tab = true,
 	window_frame = {
-		font_size = 13.0,
-		inactive_titlebar_bg = "none",
-		active_titlebar_bg = "none",
+		font_size = 12.0,
 	},
+	color_scheme = color_scheme_name,
 
-	-- Font settings
-	font = wezterm.font_with_fallback({
-		{ family = "Hack Nerd Font", weight = "Regular" },
-		{ family = "HackGen35 Console", weight = "Regular" },
+	-- Font settings（リガチャ無効化）
+	--  => == !=
+	font = wezterm.font("JetBrains Mono", {
+		weight = "Regular",
+		harfbuzz_features = { "calt=0", "clig=0", "liga=0" }, -- リガチャを無効化
 	}),
+	-- font = wezterm.font_with_fallback({
+	-- 	{ family = "Hack Nerd Font", weight = "Regular" },
+	-- 	{ family = "HackGen35 Console", weight = "Regular" },
+	-- }),
 
 	-- Text
-	font_size = 15,
+	font_size = 13,
 	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
-	line_height = 1.2,
+	-- line_height = 1.2,
 	initial_rows = 32,
 	initial_cols = 120,
 
 	-- general options
 	adjust_window_size_when_changing_font_size = false,
-	-- enable_tab_bar = false,
+	use_fancy_tab_bar = true,
 	debug_key_events = false,
 	native_macos_fullscreen_mode = false,
-
-	-- Window
-	window_close_confirmation = "NeverPrompt",
-	window_decorations = "RESIZE",
-	window_padding = {
-		left = 30,
-		right = 30,
-		top = 20,
-		bottom = 20,
-	},
-
 	use_ime = true,
 	-- ↓ ctrl-h で変換済みの文字削除問題を解消してくれる
 	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
@@ -101,5 +75,17 @@ config = {
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 	},
 }
+
+-- カラースキームの背景色を取得してタブバーに適用
+local scheme = wezterm.color.get_builtin_schemes()[color_scheme_name]
+if scheme then
+	config.colors = {
+		selection_fg = "none",
+		selection_bg = "rgba(50% 50% 50% 50%)",
+		tab_bar = {
+			background = scheme.background,
+		},
+	}
+end
 
 return config
