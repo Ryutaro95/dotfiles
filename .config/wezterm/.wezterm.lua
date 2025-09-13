@@ -11,7 +11,7 @@ local color_scheme_name = "OneDark (base16)"
 config = {
 	-- Window settings
 	window_decorations = "RESIZE|INTEGRATED_BUTTONS|MACOS_FORCE_ENABLE_SHADOW",
-	window_background_opacity = 0.97,
+	window_background_opacity = 0.99,
 	macos_window_background_blur = 60,
 	window_close_confirmation = "NeverPrompt",
 	window_padding = {
