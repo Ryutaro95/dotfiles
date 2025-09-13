@@ -53,7 +53,6 @@ window-width = 150
 font-family = "JetBrains Mono NL"
 font-style = "Regular"
 
-# カーソー設定（新規追加）
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
