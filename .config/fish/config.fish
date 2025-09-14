@@ -18,12 +18,14 @@ set -U fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
 set -gx PATH ~/.npm-global/bin $PATH
 
 abbr -a vim nvim
+abbr -a v nvim
 abbr -a ll eza -alF --icons
 abbr -a cat bat -p
 abbr -a tree eza -alF --icons -T
 abbr -a dc docker compose
 abbr -a gui gitui
 abbr -a lg lazygit
+abbr -a tm tmux
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
