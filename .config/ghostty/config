@@ -59,4 +59,4 @@ shell-integration-features = no-cursor
 
 theme = OneHalfDark
 
-keybind = ctrl+m = unbind
+# keybind = ctrl+m = unbind
