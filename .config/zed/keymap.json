@@ -1,0 +1,36 @@
+[
+  // Switch focus editor ←→ terminal
+  {
+    "context": "Editor || Terminal",
+    "bindings": {
+      "ctrl-t": ["workspace::SendKeystrokes", "ctrl-`"]
+    }
+  },
+  // Toggle Terminal: `ctrl-shift-t` or `cmd-j`
+  {
+    "bindings": {
+      "ctrl-shift-t": ["workspace::SendKeystrokes", "cmd-j"]
+    }
+  },
+  // Prev tab: `ctrl-<`
+  // Next tab: `ctrl->`
+  {
+    "bindings": {
+      "ctrl-,": ["workspace::SendKeystrokes", "alt-cmd-left"],
+      "ctrl-.": ["workspace::SendKeystrokes", "alt-cmd-right"],
+      "ctrl-i": ["workspace::SendKeystrokes", "alt-cmd-right"]
+    }
+  },
+  // Maximise the number of panes in focus: `ctrl-l`
+  {
+    "bindings": {
+      "ctrl-l": ["workspace::SendKeystrokes", "shift-escape"]
+    }
+  }
+  // {
+  //   "context": "vim_mode == insert",
+  //   "bindings": {
+  //     "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
+  //   }
+  // }
+]
