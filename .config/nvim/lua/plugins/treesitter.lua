@@ -5,27 +5,10 @@ return {
     opts = function(_, opts)
       opts.endwise = { enable = true }
       opts.indent = { enable = true, disable = { "yaml" } }
-      opts.ensure_installed = {
-        "bash",
-        "embedded_template",
-        "go",
-        "gomod",
-        "gowork",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "ruby",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-      }
+      -- vim.list_extend(opts.ensure_installed, {
+      --   "go",
+      --   "ruby",
+      -- })
     end,
   },
 }

@@ -35,8 +35,7 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        -- globalstatus = false,
-        theme = "nordic",
+        theme = "jb",
       },
     },
   },
