@@ -3,6 +3,8 @@ if status is-interactive
 end
 set PATH /opt/homebrew/bin $PATH
 set -x LANG ja_JP.UTF-8
+# Neovim
+set -gx PATH $PATH /opt/nvim-linux-x86_64/bin
 
 # Go
 set -x GOPATH $HOME/go
@@ -17,14 +19,38 @@ set -U fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
 # Claude Code
 set -gx PATH ~/.npm-global/bin $PATH
 
-abbr -a vim nvim
-abbr -a v nvim
-abbr -a ll eza -alF --icons
-abbr -a cat bat -p
-abbr -a tree eza -alF --icons -T
+bind \ct ''
+bind -M insert \ct ''
+bind -M default \ct ''
+
+# Editor aliases
+if command -v nvim >/dev/null 2>&1
+    abbr -a vim nvim
+    abbr -a v nvim
+end
+
+# File listing aliases
+if command -v eza >/dev/null 2>&1
+    abbr -a ll eza -alF --icons
+    abbr -a tree eza -alF --icons -T
+else
+    abbr -a ll ls -alF
+    abbr -a tree tree
+end
+
+# Cat alternative
+if command -v bat >/dev/null 2>&1
+    abbr -a cat bat -p
+end
+
+# Docker aliases
 abbr -a dc docker compose
-abbr -a gui gitui
-abbr -a lg lazygit
+
+if command -v lazygit >/dev/null 2>&1
+    abbr -a lg lazygit
+end
+
+# Terminal multiplexer
 abbr -a tm tmux
 
 # rbenv
@@ -45,4 +71,19 @@ end
 # zoxide
 if command -v zoxide >/dev/null 2>&1
     zoxide init fish | source
+end
+
+# NVM using bass to run bash nvm in fish
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+function __check_nvm --on-variable PWD --description 'Do nvm stuff'
+    status --is-command-substitution; and return
+
+    if test -f .nvmrc; and test -r .nvmrc;
+        nvm use
+    else
+    end
 end
