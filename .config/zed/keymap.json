@@ -6,6 +6,12 @@
       "ctrl-t": ["workspace::SendKeystrokes", "ctrl-`"]
     }
   },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-b": "workspace::ToggleLeftDock"
+    }
+  },
   // Toggle Terminal: `ctrl-shift-t` or `cmd-j`
   {
     "bindings": {
