@@ -28,7 +28,9 @@ abbr -a lg lazygit
 abbr -a tm tmux
 
 # rbenv
-status --is-interactive; and rbenv init - fish | source
+if command -v rbenv >/dev/null 2>&1
+    status --is-interactive; and rbenv init - fish | source
+end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc' ]
@@ -36,5 +38,11 @@ if [ -f '/Users/ryutaro/Downloads/google-cloud-sdk/path.fish.inc' ]
 end
 
 # Starship - https://starship.rs/ja-JP/guide/
-starship init fish | source
-zoxide init fish | source
+if command -v starship >/dev/null 2>&1
+    starship init fish | source
+end
+
+# zoxide
+if command -v zoxide >/dev/null 2>&1
+    zoxide init fish | source
+end
