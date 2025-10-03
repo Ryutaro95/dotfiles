@@ -1,21 +1,40 @@
 [
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space E": "project_panel::CollapseAllEntries",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
   // Switch focus editor ←→ terminal
   {
     "context": "Editor || Terminal",
     "bindings": {
-      "ctrl-t": ["workspace::SendKeystrokes", "ctrl-`"]
+      "ctrl-t": "terminal_panel::ToggleFocus",
+      "ctrl-/": "terminal_panel::Toggle"
     }
   },
   {
-    "context": "Workspace",
+    "context": "AgentPanel > MessageEditor > Editor && !menu",
     "bindings": {
-      "alt-b": "workspace::ToggleLeftDock"
-    }
-  },
-  // Toggle Terminal: `ctrl-shift-t` or `cmd-j`
-  {
-    "bindings": {
-      "ctrl-shift-t": ["workspace::SendKeystrokes", "cmd-j"]
+      "ctrl-k": "editor::CutToEndOfLine",
+      "ctrl-p": "editor::MoveUp",
+      "ctrl-n": "editor::MoveDown",
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-d": "editor::Delete"
     }
   },
   // Prev tab: `ctrl-<`
@@ -24,13 +43,8 @@
     "bindings": {
       "ctrl-,": ["workspace::SendKeystrokes", "alt-cmd-left"],
       "ctrl-.": ["workspace::SendKeystrokes", "alt-cmd-right"],
-      "ctrl-i": ["workspace::SendKeystrokes", "alt-cmd-right"]
-    }
-  },
-  // Maximise the number of panes in focus: `ctrl-l`
-  {
-    "bindings": {
-      "ctrl-l": ["workspace::SendKeystrokes", "shift-escape"]
+      "ctrl-i": ["workspace::SendKeystrokes", "alt-cmd-right"],
+      "ctrl-shift-l": ["workspace::SendKeystrokes", "shift-escape"]
     }
   }
   // {
