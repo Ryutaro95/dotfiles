@@ -44,7 +44,8 @@
       "ctrl-,": ["workspace::SendKeystrokes", "alt-cmd-left"],
       "ctrl-.": ["workspace::SendKeystrokes", "alt-cmd-right"],
       "ctrl-i": ["workspace::SendKeystrokes", "alt-cmd-right"],
-      "ctrl-shift-l": ["workspace::SendKeystrokes", "shift-escape"]
+      "ctrl-shift-l": ["workspace::SendKeystrokes", "shift-escape"],
+      "ctrl-s": "workspace::Save"
     }
   }
   // {
