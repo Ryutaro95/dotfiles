@@ -10,3 +10,4 @@ source ~/.local/share/omarchy/default/bash/rc
 alias ll='eza -alF --icons'
 alias tree='eza -alF --icons -T'
 alias v='nvim'
+alias lg='lazygit'
