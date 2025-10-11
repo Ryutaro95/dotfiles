@@ -1,1 +1,0 @@
-/home/ryutaro/.config/omarchy/current/theme/neovim.lua

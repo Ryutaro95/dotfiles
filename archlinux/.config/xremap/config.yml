@@ -1,0 +1,9 @@
+keypress_delay_ms: 20
+
+keymap:
+  - name: browser-tabs
+    application:
+      only: [firefox, Firefox, google-chrome, Google-chrome, chromium, Chromium, brave-browser, Brave-browser]
+    remap:
+      C-COMMA: C-PAGEUP
+      C-DOT: C-PAGEDOW
