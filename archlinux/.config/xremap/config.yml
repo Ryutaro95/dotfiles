@@ -1,9 +1,131 @@
 keypress_delay_ms: 20
 
-keymap:
-  - name: browser-tabs
-    application:
-      only: [firefox, Firefox, google-chrome, Google-chrome, chromium, Chromium, brave-browser, Brave-browser]
+modmap:
+  - name: caps_to_ctrl
     remap:
-      C-COMMA: C-PAGEUP
-      C-DOT: C-PAGEDOW
+      CapsLock: LeftCtrl
+keymap:
+  - name: emacs_like_editing
+    application:
+      not: Alacritty
+    remap:
+      C-b: { with_mark: left }
+      C-f: { with_mark: right }
+      C-p: { with_mark: up }
+      C-n: { with_mark: down }
+      C-h: { with_mark: backspace }
+      C-a: { with_mark: home }
+      C-e: { with_mark: end }
+      C-d: [delete, { set_mark: false }]
+  - name: alt_shortcuts
+    application:
+      not: ["Emacs", "URxvt", "Alacritty"]
+    remap:
+      M-s: C-s
+      M-f: C-f
+      M-a: C-a
+      M-t: C-t
+      M-n: C-n
+      M-w: C-w
+      M-r: C-r
+      M-z: C-z
+      M-Shift-z: C-Shift-z
+      M-b: C-b
+
+#
+# Credit: https://github.com/mooz/xkeysnail/blob/bf3c93b4fe6efd42893db4e6588e5ef1c4909cfb/example/config.py#L62-L125
+# keymap:
+#   - name: Emacs
+#     application:
+#       not: [Emacs]
+#     remap:
+#       # Cursor
+#       C-b: { with_mark: left }
+#       C-f: { with_mark: right }
+#       C-p: { with_mark: up }
+#       C-n: { with_mark: down }
+#       # Forward/Backward word
+#       M-b: { with_mark: C-left }
+#       M-f: { with_mark: C-right }
+#       # Beginning/End of line
+#       C-a: { with_mark: home }
+#       C-e: { with_mark: end }
+#       C-d: [delete, { set_mark: false }]
+#       # Kill line
+#       C-k: [Shift-end, C-x, { set_mark: false }]
+#       C-g: [esc, { set_mark: false }]
+#
+#       # C-x YYY
+#       # C-x:
+#       #   remap:
+#       #     # C-x h (select all)
+#       #     h: [C-home, C-a, { set_mark: true }]
+#       #     # C-x C-f (open)
+#       #     C-f: C-o
+#       #     # C-x C-s (save)
+#       #     C-s: C-s
+#       #     # C-x k (kill tab)
+#       #     k: C-f4
+#       #     # C-x C-c (exit)
+#       #     C-c: C-q
+#       #     # C-x u (undo)
+#       #     u: [C-z, { set_mark: false }]
+
+# keymap:
+#   # --- Firefox / Chrome 用 ---
+#   - name: browsers
+#     application:
+#       only: ["Firefox", "Google-chrome"]
+#     remap:
+#       C-M-j: C-TAB            # 次タブ
+#       C-M-k: C-Shift-TAB      # 前タブ
+#       C-j: C-F6               # コンテンツへフォーカス
+#       # C-o: "編集エディタで開く"（xkeysnailの launch/sleep 相当）
+#       # 実装によっては "launch" / "exec" / "shell" をサポート。
+#       # 下のどれかが使えます。動かない場合はコメントの切り替えで試してください。
+#       # 1) launch（一般的）
+#       # C-o: [C-a, C-c, {launch: ["gedit"]}, {sleep: 500}, C-v]
+#       # 2) exec
+#       # C-o: [C-a, C-c, {exec: ["gedit"]}, {sleep: 500}, C-v]
+#       # 3) shell
+#       # C-o: [C-a, C-c, {shell: "gedit &"}, {sleep: 500}, C-v]
+#
+#   # --- Alt 系の共通ショートカット（Emacs/URxvt 以外）---
+#   - name: alt_shortcuts
+#     application:
+#       not: ["Emacs", "URxvt"]
+#     remap:
+#       M-s: C-s
+#       M-f: C-f
+#       M-a: C-a
+#       # M-t: C-t
+#       M-n: C-n
+#       # M-w: C-w
+#       # M-q: C-q
+#       M-r: C-r
+#       M-z: C-z
+#       M-Shift-z: C-Shift-z
+#       M-b: C-b
+#
+#   # --- Emacs風編集キー（Emacs/URxvt 以外）---
+#   - name: emacs_like_editing
+#     application:
+#       not: ["Emacs", "URxvt"]
+#     remap:
+#       # カーソル移動（選択拡張つき）
+#       C-b: { with_mark: left }
+#       C-f: { with_mark: right }
+#       C-p: { with_mark: up }
+#       C-n: { with_mark: down }
+#       C-h: { with_mark: backspace }
+#       C-a: { with_mark: home }
+#       C-e: { with_mark: end }
+#
+#       # 削除
+#       C-d: [delete, { set_mark: false }]
+#
+#       # 行削除
+#       C-k: [Shift-end, C-x, { set_mark: false }]
+#
+
+

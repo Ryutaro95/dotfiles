@@ -22,4 +22,5 @@ bindings = [
   # Vi モード中に Y を押したら Copy → Viモード解除
   { key = "y", mode = "Vi|~Search", action = "Copy" },
   { key = "y", mode = "Vi|~Search", action = "ToggleViMode" },
+  { key = "k", mods = "Control", chars = "\u000B" } 
 ]
