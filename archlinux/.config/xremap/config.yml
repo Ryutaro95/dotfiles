@@ -16,7 +16,8 @@ keymap:
       C-h: { with_mark: backspace }
       C-a: { with_mark: home }
       C-e: { with_mark: end }
-      C-d: [delete, { set_mark: false }]
+      # nvimでページジャンプしたいのに文字が削除されるので一旦無効化
+      # C-d: [delete, { set_mark: false }]
   - name: alt_shortcuts
     application:
       not: ["Emacs", "URxvt", "Alacritty"]

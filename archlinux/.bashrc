@@ -14,3 +14,5 @@ alias vim='nvim'
 alias lg='lazygit'
 
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(atuin init bash)"
+. "$HOME/.cargo/env"
