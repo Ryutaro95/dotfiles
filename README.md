@@ -1,7 +1,7 @@
 # dotfiles
 
 各OSのドットファイルを管理
-* MacOS
+* Mac
 * Arch Linux(Hyprland)
 * Windows
 
