@@ -50,6 +50,9 @@ if command -v lazygit >/dev/null 2>&1
     abbr -a lg lazygit
 end
 
+if command -v lazydocker >/dev/null 2>&1
+    abbr -a ld lazydocker
+end
 # Terminal multiplexer
 abbr -a tm tmux
 
@@ -82,7 +85,7 @@ set -x NVM_DIR ~/.nvm
 function __check_nvm --on-variable PWD --description 'Do nvm stuff'
     status --is-command-substitution; and return
 
-    if test -f .nvmrc; and test -r .nvmrc;
+    if test -f .nvmrc; and test -r .nvmrc
         nvm use
     else
     end
