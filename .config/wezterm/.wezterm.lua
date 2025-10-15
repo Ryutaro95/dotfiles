@@ -26,7 +26,7 @@ config = {
 	color_scheme = color_scheme_name,
 
 	-- Font settings
-	font = wezterm.font("JetBrains Mono NL", {
+	font = wezterm.font("JetBrainsMono Nerd Font", {
 		weight = "Regular",
 	}),
 
@@ -63,7 +63,7 @@ config = {
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 		{ key = "[", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = "]", mods = "CTRL", action = act.ActivateTabRelative(1) },
-		{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+		{ key = "m", mods = "LEADER", action = act.TogglePaneZoomState },
 		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 	},
@@ -80,5 +80,7 @@ if scheme then
 		},
 	}
 end
+
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 return config
