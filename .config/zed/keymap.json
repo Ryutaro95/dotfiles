@@ -7,7 +7,9 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "g r": "editor::FindAllReferences"
+      "g r": "editor::FindAllReferences",
+      "shift-h": ["workspace::SendKeystrokes", "alt-cmd-left"],
+      "shift-l": ["workspace::SendKeystrokes", "alt-cmd-right"]
     }
   },
   {
