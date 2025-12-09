@@ -90,3 +90,6 @@ function __check_nvm --on-variable PWD --description 'Do nvm stuff'
     else
     end
 end
+
+# Added by Antigravity
+fish_add_path /Users/ryutaro/.antigravity/antigravity/bin
