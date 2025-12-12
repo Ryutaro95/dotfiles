@@ -66,6 +66,7 @@ config = {
 		{ key = "m", mods = "LEADER", action = act.TogglePaneZoomState },
 		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
+		{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 	},
 }
 
