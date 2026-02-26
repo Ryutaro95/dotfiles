@@ -91,5 +91,10 @@ function __check_nvm --on-variable PWD --description 'Do nvm stuff'
     end
 end
 
+# tmux自動起動
+if test -z "$TMUX" && status --is-login && test "$TERM" = xterm-ghostty
+    tmux attach-session -t main; or tmux new-session -s main
+end
+
 # Added by Antigravity
 fish_add_path /Users/ryutaro/.antigravity/antigravity/bin
