@@ -17,7 +17,11 @@
   //   },
   //   "version": "2"
   // },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
+  },
   "vim_mode": true,
   "base_keymap": "SublimeText",
   "ui_font_size": 15,
@@ -27,7 +31,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "JetBrains New Dark",
+    "light": "One Dark",
     "dark": "JetBrains New Dark"
   },
   "autosave": "on_focus_change",
