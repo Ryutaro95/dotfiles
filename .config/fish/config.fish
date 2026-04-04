@@ -45,6 +45,7 @@ end
 
 # Docker aliases
 abbr -a dc docker compose
+abbr -a cd z
 
 if command -v lazygit >/dev/null 2>&1
     abbr -a lg lazygit
@@ -98,3 +99,4 @@ end
 
 # Added by Antigravity
 fish_add_path /Users/ryutaro/.antigravity/antigravity/bin
+abbr -a vv 'NVIM_APPNAME=nvim-new nvim'

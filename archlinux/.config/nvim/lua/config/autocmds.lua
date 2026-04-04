@@ -8,6 +8,13 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+-- カーソルが止まったとき diagnostic をフロートで表示
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float({ scope = "cursor", focus = false })
+  end,
+})
+
 -- Go filetype settings
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",

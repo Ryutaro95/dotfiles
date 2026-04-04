@@ -5,9 +5,6 @@ if wezterm.config_builder then
 end
 local act = wezterm.action
 
--- カラースキームの名前を変数に保存
-local color_scheme_name = "OneDark (base16)"
-
 config = {
 	-- Window settings
 	window_decorations = "RESIZE|INTEGRATED_BUTTONS|MACOS_FORCE_ENABLE_SHADOW",
@@ -23,8 +20,6 @@ config = {
 	window_frame = {
 		font_size = 12.0,
 	},
-	color_scheme = color_scheme_name,
-
 	-- Font settings
 	font = wezterm.font("JetBrainsMono Nerd Font", {
 		weight = "Regular",
@@ -46,7 +41,7 @@ config = {
 	-- ↓ ctrl-h で変換済みの文字削除問題を解消してくれる
 	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
 
-	leader = { key = "t", mods = "CTRL", timeout_milliseconds = 1000 },
+	leader = { key = "g", mods = "CTRL", timeout_milliseconds = 1000 },
 	-- key maps
 
 	keys = {
@@ -70,17 +65,45 @@ config = {
 	},
 }
 
--- カラースキームの背景色を取得してタブバーに適用
-local scheme = wezterm.color.get_builtin_schemes()[color_scheme_name]
-if scheme then
-	config.colors = {
-		selection_fg = "none",
-		selection_bg = "rgba(50% 50% 50% 50%)",
-		tab_bar = {
-			background = scheme.background,
-		},
-	}
-end
+-- jb-dark (Ghostty) をベースにしたカスタムカラースキーム
+config.colors = {
+	foreground = "#BCBEC4",
+	background = "#1E1F22",
+
+	cursor_bg = "#CED0D6",
+	cursor_fg = "#1E1F22",
+	cursor_border = "#CED0D6",
+
+	selection_fg = "#BCBEC4",
+	selection_bg = "#214283",
+
+	-- ANSI colors (0–7)
+	ansi = {
+		"#000000", -- black
+		"#F0524F", -- red
+		"#5C962C", -- green
+		"#A68A0D", -- yellow
+		"#3993D4", -- blue
+		"#A771BF", -- magenta
+		"#00A3A3", -- cyan
+		"#808080", -- white
+	},
+	-- Bright colors (8–15)
+	brights = {
+		"#595959", -- bright black
+		"#FF4050", -- bright red
+		"#4FC414", -- bright green
+		"#E5BF00", -- bright yellow
+		"#1FB0FF", -- bright blue
+		"#ED7EED", -- bright magenta
+		"#00E5E5", -- bright cyan
+		"#FFFFFF", -- bright white
+	},
+
+	tab_bar = {
+		background = "#1E1F22",
+	},
+}
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 

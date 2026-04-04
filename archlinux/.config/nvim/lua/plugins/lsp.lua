@@ -3,6 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        ruby_lsp = {
+          cmd = { "ruby-lsp" },
+        },
         gopls = {
           settings = {
             gopls = {
