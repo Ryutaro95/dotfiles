@@ -1,8 +1,3 @@
-vim.pack.add({
-    "https://github.com/b0o/incline.nvim",
-    "https://github.com/folke/tokyonight.nvim",
-})
-
 local colors = require("tokyonight.colors").setup()
 require("incline").setup({
     highlight = {
@@ -24,4 +19,3 @@ require("incline").setup({
         return { { icon, guifg = color }, { " " }, { filename } }
     end,
 })
-

@@ -1,0 +1,18 @@
+vim.pack.add({
+    { src = "https://github.com/Saghen/blink.cmp", version = vim.version.range("^1") },
+    { src = "https://github.com/ibhagwan/fzf-lua" },
+    { src = "https://github.com/lewis6991/gitsigns.nvim" },
+    { src = "https://github.com/stevearc/oil.nvim" },
+    { src = "https://github.com/refractalize/oil-git-status.nvim" },
+    { src = "https://github.com/nvim-mini/mini.icons" },
+    { src = "https://github.com/mason-org/mason.nvim" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+    { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+    { src = "https://github.com/nvim-mini/mini.pairs" },
+    { src = "https://github.com/nvim-mini/mini.surround" },
+    { src = "https://github.com/nvim-mini/mini.completion" },
+    { src = "https://github.com/folke/which-key.nvim" },
+    { src = "https://github.com/b0o/incline.nvim" },
+    { src = "https://github.com/folke/tokyonight.nvim" },
+    { src = "https://github.com/nickkadutskyi/jb.nvim" },
+})

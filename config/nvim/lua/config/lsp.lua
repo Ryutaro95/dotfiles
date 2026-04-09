@@ -1,3 +1,8 @@
+vim.lsp.config("gopls", require("lsp.gopls"))
+vim.lsp.config("lua_ls", require("lsp.lua_ls"))
+vim.lsp.config("rust-analyzer", require("lsp.rust_analyzer"))
+vim.lsp.config("intelephense", require("lsp.intelephense"))
+
 vim.lsp.enable({
     "gopls",
     "lua_ls",
@@ -18,4 +23,3 @@ vim.api.nvim_create_autocmd("CursorHold", {
         vim.diagnostic.open_float(nil, { focus = false })
     end,
 })
-
