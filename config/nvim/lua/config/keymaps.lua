@@ -39,7 +39,7 @@ keymap("n", "<Leader>sv", "<CMD>vsplit<CR>", { desc = "Split window vertically" 
 keymap("n", "K", vim.lsp.buf.hover, { desc = "LSP: Show documentation/type info for symbol under cursor" })
 keymap("n", "<Leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol under cursor across the project" })
 keymap("n", "<Leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Show code actions (auto-fix, add import, etc.)" })
-keymap("n", "<Leader>cs", "<CMD>AerialToggle float<CR>", { desc = "Toggle code symbols outline" })
+keymap("n", "<Leader>cs", "<CMD>AerialToggle left<CR>", { desc = "Toggle code symbols outline" })
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
