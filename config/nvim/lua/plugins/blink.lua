@@ -14,4 +14,10 @@ require("blink.cmp").setup({
     },
 
     sources = { default = { "lsp" } },
+
+    keymap = {
+        ["<C-n>"] = { "select_next", "fallback" },
+        ["<C-p>"] = { "select_prev", "fallback" },
+        ["<CR>"] = { "accept", "fallback" },
+    },
 })

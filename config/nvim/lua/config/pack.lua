@@ -15,4 +15,6 @@ vim.pack.add({
     { src = "https://github.com/b0o/incline.nvim" },
     { src = "https://github.com/folke/tokyonight.nvim" },
     { src = "https://github.com/nickkadutskyi/jb.nvim" },
+    { src = "https://github.com/stevearc/aerial.nvim" },
+    { src = "https://github.com/stevearc/conform.nvim" },
 })

@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- 保存時に自動format
+-- 保存時に自動format (go)
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
     callback = function()
