@@ -32,6 +32,11 @@ keymap(
 	"<CMD>FzfLua lsp_declarations<CR>",
 	{ desc = "LSP: Jump to declaration of symbol (may differ from definition)" }
 )
+keymap("n", "<leader>gg", function()
+  vim.cmd("tabnew")
+  vim.cmd("terminal lazygit")
+  vim.cmd("startinsert")
+end, { desc = "Open lazygit" })
 -- Editor
 keymap("n", "<Esc><Esc>", "<CMD>nohlsearch<CR>", { desc = "Clear search highlight" })
 keymap("n", "<Leader>ss", "<CMD>split<CR>", { desc = "Split window horizontally" })
