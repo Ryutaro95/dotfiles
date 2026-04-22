@@ -47,6 +47,7 @@ window-padding-y = 3
 window-padding-balance = true
 window-height = 50
 window-width = 150
+window-decoration = false
 font-family = "JetBrainsMono Nerd Font"
 font-feature = -calt
 font-style = "Regular"
