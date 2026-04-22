@@ -42,8 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-window-padding-x = 20
-window-padding-y = 5
+window-padding-x = 10
+window-padding-y = 3
 window-padding-balance = true
 window-height = 50
 window-width = 150
