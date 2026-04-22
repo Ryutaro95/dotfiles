@@ -1,6 +1,4 @@
 # This is the configuration file for Ghostty.
-#
-# This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
 #   /Users/ryutaro/Library/Application Support/com.mitchellh.ghostty/config
@@ -54,6 +52,8 @@ font-style = "Regular"
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+background-opacity = 0.9
+background-blur = true
 theme = jb-dark
 # leader: capslock+g → alt+g
 keybind = alt+g>s=new_split:down
