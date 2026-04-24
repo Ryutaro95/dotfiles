@@ -2,12 +2,14 @@ vim.lsp.config("gopls", require("lsp.gopls"))
 vim.lsp.config("lua_ls", require("lsp.lua_ls"))
 vim.lsp.config("rust-analyzer", require("lsp.rust_analyzer"))
 vim.lsp.config("intelephense", require("lsp.intelephense"))
+vim.lsp.config("nixd", require("lsp.nixd"))
 
 vim.lsp.enable({
 	"gopls",
 	"lua_ls",
 	"rust-analyzer",
 	"intelephense",
+	"nixd",
 })
 
 vim.diagnostic.config({
