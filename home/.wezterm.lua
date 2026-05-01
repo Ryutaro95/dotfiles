@@ -8,7 +8,7 @@ local act = wezterm.action
 config = {
 	-- Window settings
 	window_decorations = "RESIZE|INTEGRATED_BUTTONS|MACOS_FORCE_ENABLE_SHADOW",
-	window_background_opacity = 0.99,
+	window_background_opacity = 0.9,
 	macos_window_background_blur = 60,
 	window_close_confirmation = "NeverPrompt",
 	window_padding = {
@@ -35,6 +35,7 @@ config = {
 	-- general options
 	adjust_window_size_when_changing_font_size = false,
 	use_fancy_tab_bar = true,
+    hide_tab_bar_if_only_one_tab = true,
 	debug_key_events = false,
 	native_macos_fullscreen_mode = false,
 	use_ime = true,
@@ -43,7 +44,6 @@ config = {
 
 	leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 },
 	-- key maps
-
 	keys = {
 		-- Split Pane
 		{
@@ -55,17 +55,43 @@ config = {
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+		{ key = "l", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Right") },
+		{ key = "h", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Left") },
+		{ key = "j", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Down") },
+		{ key = "k", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Up") },
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+		{ key = "w", mods = "CTRL", action = act.CloseCurrentTab({ confirm = false }) },
 		{ key = ",", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = ".", mods = "CTRL", action = act.ActivateTabRelative(1) },
-		{ key = "h", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
-		{ key = "l", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
+		-- { key = "h", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
+		-- { key = "l", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
 		{ key = "m", mods = "LEADER", action = act.TogglePaneZoomState },
 		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 		{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 	},
 }
+
+local is_mac = wezterm.target_triple:find("darwin") ~= nil
+if not is_mac then
+    -- ALT+1-9 tab switching (Windows/Linux only — Mac uses CMD which is already built-in)
+	for i = 1, 8 do
+		table.insert(config.keys, {
+			key = tostring(i),
+			mods = "ALT",
+			action = act.ActivateTab(i - 1),
+		})
+	end
+	table.insert(config.keys, {
+		key = "9",
+		mods = "ALT",
+		action = wezterm.action_callback(function(window, pane)
+			local tabs = window:mux_window():tabs()
+			window:perform_action(act.ActivateTab(#tabs - 1), pane)
+		end),
+	})
+	table.insert(config.keys, { key = "w", mods = "ALT", action = act.CloseCurrentTab({ confirm = false }) })
+end
 
 -- jb-dark (Ghostty) をベースにしたカスタムカラースキーム
 config.colors = {

@@ -1,4 +1,6 @@
-require('nvim-treesitter').setup({})
+require('nvim-treesitter').setup({
+    highlight = { enable = true },
+})
 require('nvim-treesitter').install({
     "lua",
     "php",
@@ -6,4 +8,5 @@ require('nvim-treesitter').install({
     "gomod",
     "gosum",
     "rust",
+    "nix",
 })

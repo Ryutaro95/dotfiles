@@ -1,6 +1,4 @@
 # This is the configuration file for Ghostty.
-#
-# This template file has been automatically created at the following
 # path since Ghostty couldn't find any existing config files on your system:
 #
 #   /Users/ryutaro/Library/Application Support/com.mitchellh.ghostty/config
@@ -42,16 +40,20 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-window-padding-x = 20
-window-padding-y = 5
+window-padding-x = 10
+window-padding-y = 3
 window-padding-balance = true
 window-height = 50
 window-width = 150
-# font-family = "JetBrains Mono NL"
-# font-style = "Regular"
+window-decoration = false
+font-family = "JetBrainsMono Nerd Font"
+font-feature = -calt
+font-style = "Regular"
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+background-opacity = 0.9
+background-blur = true
 theme = jb-dark
 # leader: capslock+g → alt+g
 keybind = alt+g>s=new_split:down
