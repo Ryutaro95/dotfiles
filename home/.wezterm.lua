@@ -14,7 +14,7 @@ config = {
 	window_padding = {
 		left = 20,
 		right = "0.5cell",
-		top = "0.5cell",
+		top = "1.5cell",
 		bottom = "0.5cell",
 	},
 	window_frame = {
@@ -35,23 +35,19 @@ config = {
 	-- general options
 	adjust_window_size_when_changing_font_size = false,
 	use_fancy_tab_bar = true,
-    hide_tab_bar_if_only_one_tab = true,
+	hide_tab_bar_if_only_one_tab = true,
 	debug_key_events = false,
 	native_macos_fullscreen_mode = false,
 	use_ime = true,
 	-- ↓ ctrl-h で変換済みの文字削除問題を解消してくれる
 	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
 
-	leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 },
+	leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 3000 },
 	-- key maps
 	keys = {
-		-- Split Pane
-		{
-			key = "s",
-			mods = "LEADER",
-			action = wezterm.action.SplitPane({ direction = "Down", size = { Percent = 30 } }),
-		},
+		{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 		{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
@@ -63,8 +59,6 @@ config = {
 		{ key = "w", mods = "CTRL", action = act.CloseCurrentTab({ confirm = false }) },
 		{ key = ",", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = ".", mods = "CTRL", action = act.ActivateTabRelative(1) },
-		-- { key = "h", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
-		-- { key = "l", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(1) },
 		{ key = "m", mods = "LEADER", action = act.TogglePaneZoomState },
 		{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		{ key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
@@ -74,7 +68,7 @@ config = {
 
 local is_mac = wezterm.target_triple:find("darwin") ~= nil
 if not is_mac then
-    -- ALT+1-9 tab switching (Windows/Linux only — Mac uses CMD which is already built-in)
+	-- ALT+1-9 tab switching (Windows/Linux only — Mac uses CMD which is already built-in)
 	for i = 1, 8 do
 		table.insert(config.keys, {
 			key = tostring(i),
