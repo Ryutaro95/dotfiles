@@ -1,5 +1,8 @@
 require("aerial").setup({
     backends = { "treesitter", "lsp", "markdown" },
+    layout = {
+        min_width = 30,
+    },
     float = {
         relative = "editor",
         override = function(conf, source_winid)
