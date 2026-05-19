@@ -30,7 +30,7 @@
     "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "right",
+    "dock": "left",
   },
   "agent": {
     "dock": "right",
@@ -43,7 +43,7 @@
   "icon_theme": {
     "mode": "system",
     "light": "Material Icon Theme",
-    "dark": "Material Icon Theme",
+    "dark": "Colored Zed Icons Theme Dark",
   },
   "vim_mode": true,
   "base_keymap": "SublimeText",
@@ -80,13 +80,6 @@
     "show_other_hints": true,
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50,
-  },
-  "languages": {
-    "Go": {
-      "inlay_hints": {
-        "enabled": false,
-      },
-    },
   },
   "lsp": {
     "rust-analyzer": {

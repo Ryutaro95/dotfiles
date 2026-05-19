@@ -9,8 +9,8 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "g r": "editor::FindAllReferences",
       "shift-h": ["workspace::SendKeystrokes", "alt-cmd-left"],
-      "shift-l": ["workspace::SendKeystrokes", "alt-cmd-right"]
-    }
+      "shift-l": ["workspace::SendKeystrokes", "alt-cmd-right"],
+    },
   },
   {
     "context": "ProjectPanel",
@@ -18,16 +18,16 @@
       "space e": "workspace::ToggleLeftDock",
       "space E": "project_panel::CollapseAllEntries",
       "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight"
-    }
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
   },
   // Switch focus editor ←→ terminal
   {
     "context": "Editor || Terminal",
     "bindings": {
       "ctrl-t": "terminal_panel::ToggleFocus",
-      "ctrl-/": "terminal_panel::Toggle"
-    }
+      "ctrl-/": "terminal_panel::Toggle",
+    },
   },
   {
     "context": "AgentPanel > MessageEditor > Editor && !menu",
@@ -36,8 +36,8 @@
       "ctrl-p": "editor::MoveUp",
       "ctrl-n": "editor::MoveDown",
       "ctrl-e": "editor::MoveToEndOfLine",
-      "ctrl-d": "editor::Delete"
-    }
+      "ctrl-d": "editor::Delete",
+    },
   },
   // Prev tab: `ctrl-<`
   // Next tab: `ctrl->`
@@ -47,9 +47,9 @@
       "ctrl-.": ["workspace::SendKeystrokes", "alt-cmd-right"],
       "ctrl-i": ["workspace::SendKeystrokes", "alt-cmd-right"],
       "ctrl-shift-l": ["workspace::SendKeystrokes", "shift-escape"],
-      "ctrl-s": "workspace::Save"
-    }
-  }
+      "ctrl-s": "workspace::Save",
+    },
+  },
   // {
   //   "context": "vim_mode == insert",
   //   "bindings": {
