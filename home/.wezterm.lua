@@ -8,8 +8,8 @@ local act = wezterm.action
 config = {
 	-- Window settings
 	window_decorations = "RESIZE|INTEGRATED_BUTTONS|MACOS_FORCE_ENABLE_SHADOW",
-	window_background_opacity = 0.9,
-	macos_window_background_blur = 60,
+	window_background_opacity = 0.95,
+	macos_window_background_blur = 80,
 	window_close_confirmation = "NeverPrompt",
 	window_padding = {
 		left = 20,
@@ -90,7 +90,7 @@ end
 -- jb-dark (Ghostty) をベースにしたカスタムカラースキーム
 config.colors = {
 	foreground = "#BCBEC4",
-	background = "#1E1F22",
+	background = "#252629",
 
 	cursor_bg = "#CED0D6",
 	cursor_fg = "#1E1F22",
@@ -125,6 +125,11 @@ config.colors = {
 	tab_bar = {
 		background = "#1E1F22",
 	},
+}
+
+config.inactive_pane_hsb = {
+	saturation = 0.85,
+	brightness = 0.7,
 }
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }

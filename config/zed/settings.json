@@ -41,7 +41,7 @@
     "dock": "left",
   },
   "icon_theme": {
-    "mode": "system",
+    "mode": "light",
     "light": "Material Icon Theme",
     "dark": "Colored Zed Icons Theme Dark",
   },
@@ -53,7 +53,7 @@
     "calt": false, // リガチャOFF
   },
   "theme": {
-    "mode": "dark",
+    "mode": "light",
     "light": "One Dark",
     "dark": "JetBrains Dark",
   },
