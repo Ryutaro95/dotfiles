@@ -1,6 +1,6 @@
 -- treesitterハイライト有効化
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "lua", "php", "go", "gomod", "gosum", "rust" },
+    pattern = { "lua", "php", "go", "gomod", "gosum", "rust", "typescript", "typescriptreact", "javascript", "javascriptreact" },
     callback = function()
         vim.treesitter.start()
     end,

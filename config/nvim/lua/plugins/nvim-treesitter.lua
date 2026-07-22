@@ -9,4 +9,8 @@ require('nvim-treesitter').install({
     "gosum",
     "rust",
     "nix",
+    "typescript",
+    "tsx",
+    "javascript",
+    "jsdoc",
 })
