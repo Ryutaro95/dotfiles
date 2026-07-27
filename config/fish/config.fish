@@ -23,3 +23,7 @@ abbr -a jp jump-project
 starship init fish | source
 # zoxide
 zoxide init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

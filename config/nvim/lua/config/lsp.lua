@@ -4,6 +4,7 @@ vim.lsp.config("rust-analyzer", require("lsp.rust_analyzer"))
 vim.lsp.config("intelephense", require("lsp.intelephense"))
 vim.lsp.config("nixd", require("lsp.nixd"))
 vim.lsp.config("ts_ls", require("lsp.ts_ls"))
+vim.lsp.config("basedpyright", require("lsp.basedpyright"))
 
 vim.lsp.enable({
 	"gopls",
@@ -12,6 +13,7 @@ vim.lsp.enable({
 	"intelephense",
 	"nixd",
 	"ts_ls",
+	"basedpyright",
 })
 
 vim.diagnostic.config({

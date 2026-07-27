@@ -50,10 +50,10 @@
       "ctrl-s": "workspace::Save",
     },
   },
-  // {
-  //   "context": "vim_mode == insert",
-  //   "bindings": {
-  //     "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
-  //   }
-  // }
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
+    }
+  }
 ]
