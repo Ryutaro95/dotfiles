@@ -60,8 +60,8 @@ theme = jb-dark
 # keybind = ctrl+m = unbind
 keybind = shift+enter=text:\x1b\r
 # タブ分割
-keybind = ctrl+g>v=new_split:right
-keybind = ctrl+g>s=new_split:down
+keybind = ctrl+space>v=new_split:right
+keybind = ctrl+space>s=new_split:down
 # タブ移動
 keybind = ctrl+comma=previous_tab
 keybind = ctrl+period=next_tab
@@ -70,11 +70,13 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:bottom
 keybind = ctrl+shift+k=goto_split:top
 keybind = ctrl+shift+l=goto_split:right
-keybind = ctrl+g>h=goto_split:left
-keybind = ctrl+g>j=goto_split:bottom
-keybind = ctrl+g>k=goto_split:top
-keybind = ctrl+g>l=goto_split:right
-keybind = ctrl+g>m=toggle_split_zoom
+keybind = ctrl+space>h=goto_split:left
+keybind = ctrl+space>j=goto_split:bottom
+keybind = ctrl+space>k=goto_split:top
+keybind = ctrl+space>l=goto_split:right
+keybind = ctrl+space>m=toggle_split_zoom
 # Prefix unbind
 keybind = super+d=unbind
 
+# Split divider color
+split-divider-color = #3f4756

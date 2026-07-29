@@ -42,7 +42,7 @@
     "dock": "left",
   },
   "icon_theme": {
-    "mode": "dark",
+    "mode": "light",
     "light": "Material Icon Theme",
     "dark": "JetBrains New UI Icons (Dark)",
   },
@@ -56,7 +56,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "JetBrains Dark",
+    "dark": "One Dark",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",

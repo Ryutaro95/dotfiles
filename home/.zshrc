@@ -57,3 +57,7 @@ if command -v zoxide &>/dev/null; then
     alias cd=z
 fi
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/ryutaro/.local/bin:$PATH"

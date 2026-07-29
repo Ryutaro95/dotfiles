@@ -27,3 +27,10 @@ zoxide init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/ryutaro/.local/bin" $PATH
+
+# Added by Antigravity IDE
+fish_add_path /Users/ryutaro/.antigravity-ide/antigravity-ide/bin
