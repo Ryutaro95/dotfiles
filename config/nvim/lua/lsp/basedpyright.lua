@@ -8,6 +8,7 @@ return {
 				autoSearchPaths = true,
 				diagnosticMode = "openFilesOnly",
 				useLibraryCodeForTypes = true,
+				typeCheckingMode = "standard",
 			},
 		},
 	},

@@ -1,6 +1,6 @@
 local actions = require('fzf-lua.actions')
-require('fzf-lua').setup({
-    "border-fused",
+
+require('fzf-lua').setup("border-fused", {
     fzf_colors = true,
     winopts = {
         backdrop = 85,
@@ -8,6 +8,7 @@ require('fzf-lua').setup({
     actions = {
         files = {
             ["enter"]  = actions.file_edit_or_qf,
-        }
-    }
+            ["ctrl-t"] = actions.file_tabedit,
+        },
+    },
 })

@@ -11,6 +11,9 @@ keymap("n", "<Leader>fb", "<CMD>FzfLua buffers<CR>", { desc = "Find buffer" })
 keymap("n", "<Leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "Live grep" })
 keymap("n", "<Leader>fr", "<CMD>FzfLua oldfiles<CR>", { desc = "Recent files" })
 keymap("n", "<Leader>fw", "<CMD>FzfLua grep_cword<CR>", { desc = "Grep word under cursor" })
+keymap("n", "<Leader>fc", function()
+	require("config.theme").select_theme()
+end, { desc = "Select color scheme" })
 -- LSP
 keymap("n", "gd", "<CMD>FzfLua lsp_definitions<CR>", { desc = "LSP: Jump to definition of symbol under cursor" })
 keymap("n", "gr", "<CMD>FzfLua lsp_references<CR>", { desc = "LSP: List all references to symbol under cursor" })
@@ -33,9 +36,9 @@ keymap(
 	{ desc = "LSP: Jump to declaration of symbol (may differ from definition)" }
 )
 keymap("n", "<leader>gg", function()
-  vim.cmd("tabnew")
-  vim.cmd("terminal lazygit")
-  vim.cmd("startinsert")
+	vim.cmd("tabnew")
+	vim.cmd("terminal lazygit")
+	vim.cmd("startinsert")
 end, { desc = "Open lazygit" })
 -- Editor
 keymap("n", "<Esc><Esc>", "<CMD>nohlsearch<CR>", { desc = "Clear search highlight" })
@@ -53,3 +56,5 @@ keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 keymap("n", "<Leader>u", require("undotree").open, { desc = "Open undo tree" })
+keymap("n", "<Leader>bn", "<CMD>enew<CR>", { desc = "New empty buffer" })
+
