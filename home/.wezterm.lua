@@ -63,6 +63,14 @@ config = {
 		-- { key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 		-- { key = "o", mods = "LEADER", action = act.RotatePanes("Clockwise") },
 		-- { key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
+
+		-- copy mode は herdr 側を使うので、wezterm デフォルトの CTRL+SHIFT+X を無効化
+		{ key = "x", mods = "CTRL|SHIFT", action = act.DisableDefaultAssignment },
+
+		-- pane 移動は herdr 側 (CTRL+SHIFT+h/j/k/l) を使うので、wezterm デフォルトの割り当てを無効化
+		{ key = "h", mods = "CTRL|SHIFT", action = act.DisableDefaultAssignment },
+		{ key = "k", mods = "CTRL|SHIFT", action = act.DisableDefaultAssignment },
+		{ key = "l", mods = "CTRL|SHIFT", action = act.DisableDefaultAssignment },
 	},
 }
 

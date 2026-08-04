@@ -3,11 +3,21 @@ prefix = "ctrl+space"
 zoom = "prefix+m"       # legacy alias: fullscreen
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
+next_tab = ["prefix+n", "ctrl+."]
+previous_tab = ["prefix+p", "ctrl+,"]
+copy_mode = ["prefix+[", "ctrl+shift+x"]
+focus_pane_left = ["prefix+h", "ctrl+shift+h"]
+focus_pane_down = ["prefix+j", "ctrl+shift+j"]
+focus_pane_up = ["prefix+k", "ctrl+shift+k"]
+focus_pane_right = ["prefix+l", "ctrl+shift+l"]
 
 [ui]
 show_agent_labels_on_pane_borders = true
 
 agent_panel_sort = "spaces"
+
+[ui.sound]
+enabled = false
 [theme]
 # name = "gruvbox"
 name = "terminal"
@@ -15,6 +25,6 @@ auto_switch = false
 
 [[keys.command]]
 key = "prefix+shift+l"
-type = "pane"            # "pane"（一時ペイン）/ "shell"（バックグラウンド）
+type = "pane"
 command = "lazygit"
 description = "run lazygit"
