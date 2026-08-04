@@ -18,6 +18,7 @@ abbr -a cd z
 abbr -a lg lazygit
 abbr -a ld lazydocker
 abbr -a jp jump-project
+abbr -a hr herdr
 
 # Starship - https://starship.rs/ja-JP/guide/
 starship init fish | source
