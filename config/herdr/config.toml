@@ -1,0 +1,20 @@
+[keys]
+prefix = "ctrl+space"
+zoom = "prefix+m"       # legacy alias: fullscreen
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+agent_panel_sort = "spaces"
+[theme]
+# name = "gruvbox"
+name = "terminal"
+auto_switch = false
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "pane"            # "pane"（一時ペイン）/ "shell"（バックグラウンド）
+command = "lazygit"
+description = "run lazygit"
