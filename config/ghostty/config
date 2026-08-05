@@ -59,24 +59,25 @@ theme = jb-dark
 
 # keybind = ctrl+m = unbind
 keybind = shift+enter=text:\x1b\r
-# タブ分割
-keybind = ctrl+space>v=new_split:right
-keybind = ctrl+space>s=new_split:down
-# タブ移動
-keybind = ctrl+comma=previous_tab
-keybind = ctrl+period=next_tab
-# パネル移動
-keybind = ctrl+shift+h=goto_split:left
-keybind = ctrl+shift+j=goto_split:bottom
-keybind = ctrl+shift+k=goto_split:top
-keybind = ctrl+shift+l=goto_split:right
-keybind = ctrl+space>h=goto_split:left
-keybind = ctrl+space>j=goto_split:bottom
-keybind = ctrl+space>k=goto_split:top
-keybind = ctrl+space>l=goto_split:right
-keybind = ctrl+space>m=toggle_split_zoom
-# Prefix unbind
-keybind = super+d=unbind
+
+# # タブ分割
+# keybind = ctrl+space>v=new_split:right
+# keybind = ctrl+space>s=new_split:down
+# # タブ移動
+# keybind = ctrl+comma=previous_tab
+# keybind = ctrl+period=next_tab
+# # パネル移動
+# keybind = ctrl+shift+h=goto_split:left
+# keybind = ctrl+shift+j=goto_split:bottom
+# keybind = ctrl+shift+k=goto_split:top
+# keybind = ctrl+shift+l=goto_split:right
+# keybind = ctrl+space>h=goto_split:left
+# keybind = ctrl+space>j=goto_split:bottom
+# keybind = ctrl+space>k=goto_split:top
+# keybind = ctrl+space>l=goto_split:right
+# keybind = ctrl+space>m=toggle_split_zoom
+# # Prefix unbind
+# keybind = super+d=unbind
 
 # Split divider color
 split-divider-color = #3f4756
