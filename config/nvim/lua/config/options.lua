@@ -22,7 +22,6 @@ vim.opt.winborder = "rounded"
 vim.opt.updatetime = 500
 vim.g.netrw_liststyle = 1
 vim.g.netrw_sort_by = "size"
-vim.o.autocomplete = true
 vim.o.pumborder = "solid"
 vim.o.pumwidth = 40
 vim.o.completeopt = "menu,menuone,fuzzy,noinsert"

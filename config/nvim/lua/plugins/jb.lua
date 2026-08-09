@@ -1,2 +1,1 @@
-require("jb").setup({ transparent = true })
-
+require("jb").setup()

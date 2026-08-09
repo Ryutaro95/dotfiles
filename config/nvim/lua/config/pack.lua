@@ -11,7 +11,6 @@ vim.pack.add({
     { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
     { src = "https://github.com/nvim-mini/mini.pairs" },
     { src = "https://github.com/nvim-mini/mini.surround" },
-    { src = "https://github.com/nvim-mini/mini.completion" },
     { src = "https://github.com/nvim-mini/mini.cursorword" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/b0o/incline.nvim" },
