@@ -19,6 +19,7 @@ abbr -a lg lazygit
 abbr -a ld lazydocker
 abbr -a jp jump-project
 abbr -a hr herdr
+abbr -a journal "cd /Users/ryutaro/Documents/ryutaro-vault"
 
 # Starship - https://starship.rs/ja-JP/guide/
 starship init fish | source

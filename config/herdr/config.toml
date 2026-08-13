@@ -1,3 +1,4 @@
+onboarding = false
 [keys]
 prefix = "ctrl+space"
 zoom = "prefix+m"       # legacy alias: fullscreen
@@ -20,7 +21,7 @@ agent_panel_sort = "spaces"
 enabled = false
 [theme]
 # name = "gruvbox"
-name = "terminal"
+name = "dracula"
 auto_switch = false
 
 [[keys.command]]
