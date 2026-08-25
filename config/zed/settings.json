@@ -19,6 +19,9 @@
   //   "version": "2"
   // },
   "agent_servers": {
+    "antigravity-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     },
@@ -34,6 +37,7 @@
     "dock": "left",
   },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [],
     "model_parameters": [],
@@ -48,7 +52,7 @@
   },
   "vim_mode": true,
   "base_keymap": "SublimeText",
-  "ui_font_size": 15,
+  "ui_font_size": 16,
   "buffer_font_size": 13.0,
   "buffer_font_features": {
     "calt": false, // リガチャOFF
@@ -56,7 +60,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "One Dark",
+    "dark": "JetBrains New Dark",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -67,7 +71,7 @@
   },
   // "git_status": true,
   "terminal": {
-    "font_size": 13,
+    "font_size": 14.0,
     "font_family": "JetBrainsMono Nerd Font",
   },
   "project_panel": {

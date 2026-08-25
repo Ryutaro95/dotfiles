@@ -21,11 +21,13 @@ agent_panel_sort = "spaces"
 enabled = false
 [theme]
 # name = "gruvbox"
-name = "dracula"
+name = "nord"
 auto_switch = false
 
 [[keys.command]]
 key = "prefix+shift+l"
-type = "pane"
+type = "popup"
 command = "lazygit"
 description = "run lazygit"
+width = "80%"
+height = "80%"

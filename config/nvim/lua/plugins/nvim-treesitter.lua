@@ -13,5 +13,9 @@ require('nvim-treesitter').install({
     "tsx",
     "javascript",
     "jsdoc",
+    "svelte",
+    "html",
+    "css",
+    "json",
     "python",
 })

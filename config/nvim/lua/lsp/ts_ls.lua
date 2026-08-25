@@ -10,6 +10,9 @@ return {
                 includeInlayVariableTypeHints = true,
                 includeInlayFunctionLikeReturnTypeHints = true,
             },
+            format = {
+                semicolons = "insert",
+            },
         },
         javascript = {
             inlayHints = {
@@ -17,6 +20,9 @@ return {
                 includeInlayFunctionParameterTypeHints = true,
                 includeInlayVariableTypeHints = true,
                 includeInlayFunctionLikeReturnTypeHints = true,
+            },
+            format = {
+                semicolons = "insert",
             },
         },
     },

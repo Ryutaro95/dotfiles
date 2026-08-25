@@ -24,4 +24,6 @@ vim.pack.add({
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
     { src = "https://github.com/nvim-tree/nvim-tree.lua" },
     { src = "https://github.com/akinsho/nvim-bufferline.lua" },
+    { src = "https://github.com/windwp/nvim-ts-autotag" },
+    { src = "https://github.com/karb94/neoscroll.nvim" },
 })

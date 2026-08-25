@@ -18,5 +18,7 @@ require("plugins.onedarkpro")
 require("plugins.md-render")
 require("plugins.nvim-tree")
 require("plugins.bufferline")
+require("plugins.nvim-ts-autotag")
+require("plugins.neoscroll")
 
 require("config.theme").apply_saved_theme()

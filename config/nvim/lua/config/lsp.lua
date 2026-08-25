@@ -5,6 +5,7 @@ vim.lsp.config("intelephense", require("lsp.intelephense"))
 vim.lsp.config("nixd", require("lsp.nixd"))
 vim.lsp.config("ts_ls", require("lsp.ts_ls"))
 vim.lsp.config("basedpyright", require("lsp.basedpyright"))
+vim.lsp.config("svelte", require("lsp.svelte"))
 
 vim.lsp.enable({
 	"gopls",
@@ -14,6 +15,7 @@ vim.lsp.enable({
 	"nixd",
 	"ts_ls",
 	"basedpyright",
+	"svelte",
 })
 
 vim.diagnostic.config({

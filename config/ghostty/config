@@ -57,6 +57,9 @@ shell-integration-features = no-cursor
 
 theme = jb-dark
 
+# マウスホイールのスクロール量を滑らかにする (デフォルト: discrete:3, precision:1)
+mouse-scroll-multiplier = discrete:1.5
+
 # keybind = ctrl+m = unbind
 keybind = shift+enter=text:\x1b\r
 

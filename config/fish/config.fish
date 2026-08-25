@@ -36,3 +36,8 @@ set -gx PATH "/Users/ryutaro/.local/bin" $PATH
 
 # Added by Antigravity IDE
 fish_add_path /Users/ryutaro/.antigravity-ide/antigravity-ide/bin
+
+# Activate mise
+if command -q mise
+    mise activate fish | source
+end
