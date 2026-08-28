@@ -55,6 +55,11 @@ shell-integration-features = no-cursor
 background-opacity = 0.9
 background-blur = true
 theme = jb-dark
+
+# herdr uses ctrl+shift+j for focus_pane_down, but Ghostty's default
+# ctrl+shift+j binding (paste screen to file) intercepts it first.
+keybind = ctrl+shift+j=unbind
+
 # leader: capslock+g → alt+g
 keybind = alt+g>s=new_split:down
 keybind = alt+g>v=new_split:right

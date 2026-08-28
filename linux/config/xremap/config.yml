@@ -1,0 +1,73 @@
+virtual_modifiers:
+  - CapsLock
+
+modmap:
+  - remap:
+      CapsLock:
+        held: CapsLock
+        alone: [] # 単押し → 何も出力しない
+        alone_timeout_millis: 150 # tap/hold判定のしきい値
+
+keymap:
+  - name: Terminal系
+    application:
+      only: com.mitchellh.ghostty
+    remap:
+      CapsLock-k: C-k
+      CapsLock-LeftBrace: Esc
+      CapsLock-c: C-c
+      CapsLock-u: C-u
+      CapsLock-d: C-d
+      CapsLock-Space: C-Space
+      CapsLock-Shift-h: C-Shift-h
+      CapsLock-Shift-j: C-Shift-j
+      CapsLock-Shift-k: C-Shift-k
+      CapsLock-Shift-l: C-Shift-l
+      CapsLock-Comma: C-M-b
+      CapsLock-Dot: C-M-n
+  - name: ブラウザ系
+    application:
+      only:
+        - firefox
+        - brave-browser
+        - Google-chrome
+    remap:
+      CapsLock-Comma: C-PageUp
+      CapsLock-Dot: C-PageDown
+
+  - name: IDE
+    application:
+      only:
+        - dev.zed.Zed
+        - obsidian
+        - code
+    remap:
+      CapsLock-k: C-k
+      CapsLock-LeftBrace: Esc
+      CapsLock-c: C-c
+      CapsLock-u: C-u
+      CapsLock-d: C-d
+
+  - name: Zed editor
+    application:
+      only:
+        - dev.zed.Zed
+    remap:
+      CapsLock-h: Shift-Ctrl-Alt-h
+      CapsLock-j: Shift-Ctrl-Alt-j
+      CapsLock-l: Shift-Ctrl-Alt-l
+      CapsLock-t: Shift-Ctrl-Alt-t
+      CapsLock-slash: Shift-Ctrl-Alt-slash
+
+  - remap: # 共通
+      CapsLock-p: Up
+      CapsLock-n: Down
+      CapsLock-b: Left
+      CapsLock-f: Right
+      CapsLock-a: Home
+      CapsLock-e: End
+      CapsLock-h: Backspace
+      CapsLock-d: Delete
+      CapsLock-k: [Shift-End, Backspace]
+      CapsLock-Right: Super-M-Right
+      CapsLock-Left: Super-M-Left

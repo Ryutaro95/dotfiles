@@ -1,0 +1,12 @@
+[Unit]
+Description=xremap
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.cargo/bin/xremap --watch=device %h/.config/xremap/config.yml
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target

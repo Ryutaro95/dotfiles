@@ -18,4 +18,5 @@ require('nvim-treesitter').install({
     "css",
     "json",
     "python",
+    "yaml",
 })
