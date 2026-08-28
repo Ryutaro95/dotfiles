@@ -23,6 +23,7 @@ keymap:
       CapsLock-Shift-j: C-Shift-j
       CapsLock-Shift-k: C-Shift-k
       CapsLock-Shift-l: C-Shift-l
+      CapsLock-Shift-x: C-Shift-x
       CapsLock-Comma: C-M-b
       CapsLock-Dot: C-M-n
   - name: ブラウザ系
