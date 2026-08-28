@@ -21,7 +21,7 @@ agent_panel_sort = "spaces"
 enabled = false
 [theme]
 # name = "gruvbox"
-name = "nord"
+name = "terminal"
 auto_switch = false
 
 [[keys.command]]
