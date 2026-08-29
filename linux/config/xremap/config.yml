@@ -27,6 +27,7 @@ keymap:
       CapsLock-j: C-j
       CapsLock-k: C-k
       CapsLock-l: C-l
+      CapsLock-o: C-o
       CapsLock-Shift-x: C-Shift-x
       CapsLock-Comma: C-M-b
       CapsLock-Dot: C-M-n
