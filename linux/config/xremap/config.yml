@@ -23,6 +23,10 @@ keymap:
       CapsLock-Shift-j: C-Shift-j
       CapsLock-Shift-k: C-Shift-k
       CapsLock-Shift-l: C-Shift-l
+      CapsLock-h: C-h
+      CapsLock-j: C-j
+      CapsLock-k: C-k
+      CapsLock-l: C-l
       CapsLock-Shift-x: C-Shift-x
       CapsLock-Comma: C-M-b
       CapsLock-Dot: C-M-n
