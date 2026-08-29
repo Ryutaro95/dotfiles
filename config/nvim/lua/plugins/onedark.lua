@@ -1,5 +1,3 @@
-require("onedarkpro").setup({
-    options = {
-        transparency = true,
-    },
+require("onedark").setup({
+    transparent = false,
 })

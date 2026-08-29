@@ -18,7 +18,7 @@ vim.pack.add({
     { src = "https://github.com/nickkadutskyi/jb.nvim" },
     { src = "https://github.com/stevearc/aerial.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
-    { src = "https://github.com/olimorris/onedarkpro.nvim" },
+    { src = "https://github.com/navarasu/onedark.nvim" },
     { src = "https://github.com/morhetz/gruvbox" },
     { src = "https://github.com/delphinus/md-render.nvim" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
@@ -26,4 +26,5 @@ vim.pack.add({
     { src = "https://github.com/akinsho/nvim-bufferline.lua" },
     { src = "https://github.com/windwp/nvim-ts-autotag" },
     { src = "https://github.com/karb94/neoscroll.nvim" },
+    { src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
