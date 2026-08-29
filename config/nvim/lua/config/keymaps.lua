@@ -8,8 +8,10 @@ keymap("i", "jk", "<Esc>")
 keymap("n", "<Leader>e", "<CMD>Oil %:p:h<CR>", { desc = "Open parent directory" })
 keymap("n", "<Leader>ff", "<CMD>FzfLua files<CR>", { desc = "Find files" })
 keymap("n", ";f", "<CMD>FzfLua files<CR>", { desc = "Find files" })
+keymap("n", "<Leader><Space>", "<CMD>FzfLua files<CR>", { desc = "Find files" })
 keymap("n", "<Leader>fb", "<CMD>FzfLua buffers<CR>", { desc = "Find buffer" })
 keymap("n", ";b", "<CMD>FzfLua buffers<CR>", { desc = "Find buffer" })
+keymap("n", "<Leader>bl", "<CMD>FzfLua buffers<CR>", { desc = "Find buffer" })
 keymap("n", "<Leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "Live grep" })
 keymap("n", ";g", "<CMD>FzfLua live_grep<CR>", { desc = "Live grep" })
 keymap("n", "<Leader>fr", "<CMD>FzfLua oldfiles<CR>", { desc = "Recent files" })
@@ -21,8 +23,48 @@ keymap("n", "<Leader>fc", function()
 	require("config.theme").select_theme()
 end, { desc = "Select color scheme" })
 -- LSP
-keymap("n", "gd", "<CMD>FzfLua lsp_definitions<CR>", { desc = "LSP: Jump to definition of symbol under cursor" })
-keymap("n", "gr", "<CMD>FzfLua lsp_references<CR>", { desc = "LSP: List all references to symbol under cursor" })
+-- Neovim組み込みのデフォルトgr*系マッピング(gra/gri/grn/grr/grt/grx)を削除。
+-- 残しておくと自前の "gr" が前方一致で衝突し、押すたびtimeoutlen分(既定1000ms)待たされる。
+for _, lhs in ipairs({ "gra", "gri", "grn", "grr", "grt", "grx" }) do
+	pcall(vim.keymap.del, "n", lhs)
+end
+
+keymap("n", "gd", function()
+	local origin_win = vim.api.nvim_get_current_win()
+	local symbol = vim.fn.expand("<cword>")
+	vim.lsp.buf.definition({
+		on_list = function(options)
+			if #options.items <= 1 then
+				vim.fn.setqflist({}, " ", options)
+				vim.api.nvim_win_call(origin_win, function()
+					pcall(vim.cmd, "1cc")
+				end)
+				vim.api.nvim_set_current_win(origin_win)
+				return
+			end
+			require("config.xref").show({
+				items = options.items,
+				origin_win = origin_win,
+				symbol = symbol,
+				label = "Go to definition",
+			})
+		end,
+	})
+end, { desc = "LSP: Jump to definition of symbol under cursor" })
+keymap("n", "gr", function()
+	local origin_win = vim.api.nvim_get_current_win()
+	local symbol = vim.fn.expand("<cword>")
+	vim.lsp.buf.references(nil, {
+		on_list = function(options)
+			require("config.xref").show({
+				items = options.items,
+				origin_win = origin_win,
+				symbol = symbol,
+				label = "Go to xref",
+			})
+		end,
+	})
+end, { desc = "LSP: List all references to symbol under cursor" })
 keymap(
 	"n",
 	"gi",

@@ -86,6 +86,82 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- quickfixの背景をエディタより暗くする(カラースキーム変更のたびに追従)
+local function darken_hex(hex, amount)
+    local r = tonumber(hex:sub(2, 3), 16)
+    local g = tonumber(hex:sub(4, 5), 16)
+    local b = tonumber(hex:sub(6, 7), 16)
+    r = math.max(0, math.floor(r * (1 - amount)))
+    g = math.max(0, math.floor(g * (1 - amount)))
+    b = math.max(0, math.floor(b * (1 - amount)))
+    return string.format("#%02x%02x%02x", r, g, b)
+end
+
+local function set_qf_highlight()
+    local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
+    if not normal.bg then
+        return
+    end
+    local dark_bg = darken_hex(string.format("#%06x", normal.bg), 0.2)
+    vim.api.nvim_set_hl(0, "QfNormal", { bg = dark_bg, fg = normal.fg })
+
+    -- カーソル行をエディタより暗くする(デフォルトは明るくなるテーマが多いため)
+    local cursorline_bg = darken_hex(string.format("#%06x", normal.bg), 0.15)
+    vim.api.nvim_set_hl(0, "CursorLine", { bg = cursorline_bg })
+
+    -- 対応括弧も明るくするのではなく暗くし、文字色はパステルな赤ピンクで見やすくする
+    local matchparen_bg = darken_hex(string.format("#%06x", normal.bg), 0.3)
+    vim.api.nvim_set_hl(0, "MatchParen", { bg = matchparen_bg, fg = "#e57373", bold = true })
+
+    -- xrefピッカー(gr)用のハイライト。カラースキーム変更のたびに張り直す。
+    vim.api.nvim_set_hl(0, "XrefFile", { link = "Title", italic = true, default = false })
+    vim.api.nvim_set_hl(0, "XrefLnum", { link = "Number", default = false })
+    vim.api.nvim_set_hl(0, "XrefMatch", { link = "Identifier", bold = true, default = false })
+end
+
+set_qf_highlight()
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = set_qf_highlight,
+})
+
+-- quickfixリストの選択移動に合わせて、フォーカスは保ったままエディタ側もその場所へ移動する
+-- <CR>で確定してリストを閉じる / <Esc>でキャンセルして元の位置に戻す
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "qf",
+    callback = function(args)
+        vim.wo.winhighlight = "Normal:QfNormal,NormalNC:QfNormal,SignColumn:QfNormal,EndOfBuffer:QfNormal"
+
+        vim.api.nvim_create_autocmd("CursorMoved", {
+            buffer = args.buf,
+            callback = function()
+                local qf_win = vim.api.nvim_get_current_win()
+                local idx = vim.fn.line(".")
+                local ok = pcall(vim.cmd, "noautocmd " .. idx .. "cc")
+                if ok and vim.api.nvim_win_is_valid(qf_win) then
+                    vim.api.nvim_set_current_win(qf_win)
+                end
+            end,
+        })
+
+        vim.keymap.set("n", "<CR>", function()
+            vim.cmd("cc")
+            vim.cmd("cclose")
+        end, { buffer = args.buf, silent = true })
+
+        vim.keymap.set("n", "<Esc>", function()
+            local origin_win = vim.b[args.buf].qf_origin_win
+            local origin_pos = vim.b[args.buf].qf_origin_pos
+            vim.cmd("cclose")
+            if origin_win and vim.api.nvim_win_is_valid(origin_win) then
+                vim.api.nvim_set_current_win(origin_win)
+                if origin_pos then
+                    pcall(vim.api.nvim_win_set_cursor, origin_win, origin_pos)
+                end
+            end
+        end, { buffer = args.buf, silent = true, nowait = true })
+    end,
+})
+
 -- 保存時に自動format (go)
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",

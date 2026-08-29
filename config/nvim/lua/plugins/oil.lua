@@ -6,6 +6,7 @@ require("oil").setup({
     },
     win_options = {
         signcolumn = "yes:2",
+        winhighlight = "Normal:QfNormal,NormalNC:QfNormal,SignColumn:QfNormal,EndOfBuffer:QfNormal",
     },
     keymaps = {
         ["q"] = "actions.close",
