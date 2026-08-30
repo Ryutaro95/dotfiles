@@ -14,6 +14,7 @@ require("conform").setup({
         yaml = { "prettierd", "prettier", stop_after_first = true },
         markdown = { "prettierd", "prettier", stop_after_first = true },
         python = { "ruff_format", "ruff_organize_imports" },
+        ruby = { "rubocop" },
     },
     formatters = {
         prettierd = {

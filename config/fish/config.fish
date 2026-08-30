@@ -7,6 +7,11 @@ set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 # Rust
 set -U fish_user_paths $fish_user_paths $HOME/.cargo/bin
+# Ruby
+if command -q ruby
+    set -gx GEM_HOME (ruby -e 'print Gem.user_dir')
+    set -gx PATH $GEM_HOME/bin $PATH
+end
 # Claude Code
 set -gx PATH ~/.npm-global/bin $PATH
 

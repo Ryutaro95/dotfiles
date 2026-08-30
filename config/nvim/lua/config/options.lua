@@ -15,6 +15,7 @@ vim.opt.statuscolumn = "%s%l %r  "
 vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
+vim.opt.mousescroll = "ver:1,hor:6"
 vim.opt.inccommand = "nosplit"
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"

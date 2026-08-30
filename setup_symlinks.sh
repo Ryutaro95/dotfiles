@@ -30,14 +30,28 @@ done < <(find "$DOTFILES/home" -maxdepth 1 -mindepth 1 -print0)
 echo ""
 
 # --- config/ 配下をそのまま ~/.config/ にリンク (fish, zed, herdr は個別処理) ---
+# linux/config/ に同名ディレクトリがあればそちらを優先してリンクする
 echo "[config/ -> ~/.config/]"
 while IFS= read -r -d '' src; do
   name="${src#"$DOTFILES/config/"}"
   case "$name" in
     fish|zed|herdr) continue ;;
   esac
+  if [ -e "$DOTFILES/linux/config/$name" ]; then
+    continue
+  fi
   link "$src" "$HOME/.config/$name"
 done < <(find "$DOTFILES/config" -maxdepth 1 -mindepth 1 -print0)
+echo ""
+
+# --- linux/config/ 配下を ~/.config/ にリンク (Linux固有 / config/ の上書き) ---
+echo "[linux/config/ -> ~/.config/]"
+if [ -d "$DOTFILES/linux/config" ]; then
+  while IFS= read -r -d '' src; do
+    name="${src#"$DOTFILES/linux/config/"}"
+    link "$src" "$HOME/.config/$name"
+  done < <(find "$DOTFILES/linux/config" -maxdepth 1 -mindepth 1 -print0)
+fi
 echo ""
 
 # --- fish: config.fish のみ ~/.config/fish/ 内にリンク ---

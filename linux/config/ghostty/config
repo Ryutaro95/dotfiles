@@ -52,9 +52,10 @@ font-style = "Regular"
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-background-opacity = 0.9
-background-blur = true
+background-opacity = 0.85
+background-blur = 80
 theme = jb-dark
+mouse-scroll-multiplier = precision:1,discrete:1
 
 # herdr uses ctrl+shift+j for focus_pane_down, but Ghostty's default
 # ctrl+shift+j binding (paste screen to file) intercepts it first.

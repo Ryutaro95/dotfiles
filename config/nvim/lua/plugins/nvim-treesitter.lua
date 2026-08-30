@@ -19,4 +19,5 @@ require('nvim-treesitter').install({
     "json",
     "python",
     "yaml",
+    "ruby",
 })
