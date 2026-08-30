@@ -6,6 +6,7 @@ navigate_workspace_up = "k"
 navigate_workspace_down = "j"
 next_tab = ["prefix+n", "ctrl+alt+n"]
 previous_tab = ["prefix+p", "ctrl+alt+b"]
+switch_tab = ["prefix+1..9", "alt+1", "alt+2", "alt+3", "alt+4", "alt+5", "alt+6", "alt+7", "alt+8"]
 copy_mode = ["prefix+[", "ctrl+shift+x"]
 focus_pane_left = ["prefix+h", "ctrl+shift+h"]
 focus_pane_down = ["prefix+j", "ctrl+shift+j"]
@@ -33,3 +34,9 @@ command = "lazygit"
 description = "run lazygit"
 width = "80%"
 height = "80%"
+
+[[keys.command]]
+key = "alt+9"
+type = "shell"
+command = "herdr tab focus \"$(herdr tab list | jq -r '.result.tabs as $t | ($t[] | select(.focused) | .workspace_id) as $ws | [$t[] | select(.workspace_id==$ws)] | max_by(.label|tonumber) | .tab_id')\""
+description = "Focus last tab in current workspace"

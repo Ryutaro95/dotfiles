@@ -106,7 +106,7 @@ local function set_qf_highlight()
     vim.api.nvim_set_hl(0, "QfNormal", { bg = dark_bg, fg = normal.fg })
 
     -- カーソル行をエディタより暗くする(デフォルトは明るくなるテーマが多いため)
-    local cursorline_bg = darken_hex(string.format("#%06x", normal.bg), 0.15)
+    local cursorline_bg = darken_hex(string.format("#%06x", normal.bg), 0.2)
     vim.api.nvim_set_hl(0, "CursorLine", { bg = cursorline_bg })
 
     -- 対応括弧も明るくするのではなく暗くし、文字色はパステルな赤ピンクで見やすくする
