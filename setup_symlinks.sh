@@ -29,12 +29,12 @@ while IFS= read -r -d '' src; do
 done < <(find "$DOTFILES/home" -maxdepth 1 -mindepth 1 -print0)
 echo ""
 
-# --- config/ 配下をそのまま ~/.config/ にリンク (fish, zed は個別処理) ---
+# --- config/ 配下をそのまま ~/.config/ にリンク (fish, zed, herdr は個別処理) ---
 echo "[config/ -> ~/.config/]"
 while IFS= read -r -d '' src; do
   name="${src#"$DOTFILES/config/"}"
   case "$name" in
-    fish|zed) continue ;;
+    fish|zed|herdr) continue ;;
   esac
   link "$src" "$HOME/.config/$name"
 done < <(find "$DOTFILES/config" -maxdepth 1 -mindepth 1 -print0)
@@ -56,6 +56,15 @@ while IFS= read -r -d '' src; do
   name="${src#"$DOTFILES/config/zed/"}"
   link "$src" "$HOME/.config/zed/$name"
 done < <(find "$DOTFILES/config/zed" -maxdepth 1 -mindepth 1 -print0)
+echo ""
+
+# --- herdr: 実行時にログ/ソケットを書き込むため、config/herdr/* を個別にリンク ---
+echo "[config/herdr/* -> ~/.config/herdr/]"
+mkdir -p "$HOME/.config/herdr"
+while IFS= read -r -d '' src; do
+  name="${src#"$DOTFILES/config/herdr/"}"
+  link "$src" "$HOME/.config/herdr/$name"
+done < <(find "$DOTFILES/config/herdr" -maxdepth 1 -mindepth 1 -print0)
 echo ""
 
 echo "=== 完了 ==="
