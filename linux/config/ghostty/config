@@ -48,6 +48,7 @@ window-width = 150
 window-decoration = false
 font-family = "JetBrainsMono Nerd Font"
 font-feature = -calt
+adjust-cell-height = 15%
 font-style = "Regular"
 cursor-style = block
 cursor-style-blink = false

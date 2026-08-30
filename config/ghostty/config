@@ -52,6 +52,7 @@ window-width = 150
 # font-family = "JetBrains Mono NL"
 # font-style = "Regular"
 font-feature = -calt
+adjust-cell-height = 15%
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
