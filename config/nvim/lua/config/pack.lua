@@ -20,7 +20,7 @@ vim.pack.add({
     { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/navarasu/onedark.nvim" },
     { src = "https://github.com/morhetz/gruvbox" },
-    { src = "https://github.com/delphinus/md-render.nvim" },
+    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
     { src = "https://github.com/nvim-tree/nvim-tree.lua" },
     { src = "https://github.com/akinsho/nvim-bufferline.lua" },
