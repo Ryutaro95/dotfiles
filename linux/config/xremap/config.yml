@@ -11,7 +11,10 @@ modmap:
 keymap:
   - name: Terminal系
     application:
-      only: com.mitchellh.ghostty
+      only:
+        - com.mitchellh.ghostty
+        - com.system76.CosmicTerm
+        - rio
     remap:
       CapsLock-k: C-k
       CapsLock-LeftBrace: Esc

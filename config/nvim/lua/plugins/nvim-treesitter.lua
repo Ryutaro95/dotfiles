@@ -20,4 +20,6 @@ require('nvim-treesitter').install({
     "python",
     "yaml",
     "ruby",
+    "markdown",
+    "markdown_inline",
 })
