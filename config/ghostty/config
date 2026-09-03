@@ -61,5 +61,7 @@ theme = jb-dark
 mouse-scroll-multiplier = discrete:1.5
 # keybind = ctrl+m = unbind
 keybind = shift+enter=text:\x1b\r
+# Ghostty's default cmd+9 (last_tab) intercepts the keypress before herdr sees it; unbind so herdr can use it.
+keybind = super+9=unbind
 # Split divider color
 split-divider-color = #3f4756
