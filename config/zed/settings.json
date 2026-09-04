@@ -58,8 +58,8 @@
     "calt": false, // リガチャOFF
   },
   "theme": {
-    "mode": "dark",
-    "light": "One Dark",
+    "mode": "light",
+    "light": "One Light",
     "dark": "JetBrains New Dark",
   },
   "autosave": "on_focus_change",

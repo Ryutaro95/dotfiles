@@ -51,11 +51,17 @@ keymap:
         - obsidian
         - code
     remap:
-      CapsLock-k: C-k
       CapsLock-LeftBrace: Esc
       CapsLock-c: C-c
       CapsLock-u: C-u
       CapsLock-d: C-d
+      CapsLock-h: C-h
+      CapsLock-j: C-j
+      CapsLock-k: C-k
+      CapsLock-l: C-l
+      CapsLock-t: C-t
+      CapsLock-Comma: C-Comma
+      CapsLock-Dot: C-Dot
 
   - name: Zed editor
     application:
