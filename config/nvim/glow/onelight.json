@@ -1,0 +1,142 @@
+{
+  "document": {
+    "block_prefix": "\n",
+    "block_suffix": "\n",
+    "color": "#383a42",
+    "margin": 2
+  },
+  "block_quote": {
+    "color": "#696c77",
+    "italic": true,
+    "indent": 1,
+    "indent_token": "│ "
+  },
+  "paragraph": {},
+  "list": {
+    "level_indent": 2
+  },
+  "heading": {
+    "block_suffix": "\n",
+    "color": "#4078f2",
+    "bold": true
+  },
+  "h1": {
+    "prefix": " ",
+    "suffix": " ",
+    "color": "#fafafa",
+    "background_color": "#4078f2",
+    "bold": true
+  },
+  "h2": {
+    "prefix": "## ",
+    "color": "#a626a4"
+  },
+  "h3": {
+    "prefix": "### ",
+    "color": "#0184bc"
+  },
+  "h4": {
+    "prefix": "#### ",
+    "color": "#50a14f"
+  },
+  "h5": {
+    "prefix": "##### ",
+    "color": "#c18401"
+  },
+  "h6": {
+    "prefix": "###### ",
+    "color": "#a0a1a7",
+    "bold": false
+  },
+  "text": {},
+  "strikethrough": {
+    "crossed_out": true
+  },
+  "emph": {
+    "italic": true
+  },
+  "strong": {
+    "bold": true
+  },
+  "hr": {
+    "color": "#a0a1a7",
+    "format": "\n--------\n"
+  },
+  "item": {
+    "block_prefix": "• "
+  },
+  "enumeration": {
+    "block_prefix": ". "
+  },
+  "task": {
+    "ticked": "[✓] ",
+    "unticked": "[ ] "
+  },
+  "link": {
+    "color": "#0184bc",
+    "underline": true
+  },
+  "link_text": {
+    "color": "#4078f2",
+    "bold": true
+  },
+  "image": {
+    "color": "#a626a4",
+    "underline": true
+  },
+  "image_text": {
+    "color": "#a0a1a7",
+    "format": "Image: {{.text}} →"
+  },
+  "code": {
+    "prefix": " ",
+    "suffix": " ",
+    "color": "#e45649",
+    "background_color": "#ebebeb"
+  },
+  "code_block": {
+    "color": "#383a42",
+    "margin": 2,
+    "chroma": {
+      "text": { "color": "#383a42" },
+      "error": { "color": "#fafafa", "background_color": "#e45649" },
+      "comment": { "color": "#a0a1a7", "italic": true },
+      "comment_preproc": { "color": "#a626a4" },
+      "keyword": { "color": "#a626a4" },
+      "keyword_reserved": { "color": "#a626a4" },
+      "keyword_namespace": { "color": "#a626a4" },
+      "keyword_type": { "color": "#c18401" },
+      "operator": { "color": "#0184bc" },
+      "punctuation": { "color": "#383a42" },
+      "name": {},
+      "name_builtin": { "color": "#0184bc" },
+      "name_tag": { "color": "#e45649" },
+      "name_attribute": { "color": "#986801" },
+      "name_class": { "color": "#c18401" },
+      "name_constant": { "color": "#986801" },
+      "name_decorator": { "color": "#4078f2" },
+      "name_exception": { "color": "#e45649" },
+      "name_function": { "color": "#4078f2" },
+      "name_other": {},
+      "literal": {},
+      "literal_number": { "color": "#986801" },
+      "literal_date": {},
+      "literal_string": { "color": "#50a14f" },
+      "literal_string_escape": { "color": "#0184bc" },
+      "generic_deleted": { "color": "#e45649" },
+      "generic_emph": { "italic": true },
+      "generic_inserted": { "color": "#50a14f" },
+      "generic_strong": { "bold": true },
+      "generic_subheading": { "color": "#a0a1a7" },
+      "background": { "background_color": "#f0f0f0" }
+    }
+  },
+  "table": {},
+  "definition_list": {},
+  "definition_term": {},
+  "definition_description": {
+    "block_prefix": "\n🠶 "
+  },
+  "html_block": {},
+  "html_span": {}
+}
