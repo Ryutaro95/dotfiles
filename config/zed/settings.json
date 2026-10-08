@@ -49,7 +49,7 @@
     "dock": "left",
   },
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Material Icon Theme",
     "dark": "JetBrains New UI Icons (Dark)",
   },
@@ -61,9 +61,9 @@
     "calt": false, // リガチャOFF
   },
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "JetBrains New Dark",
+    "dark": "One Dark",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -82,7 +82,7 @@
     "auto_fold_dirs": false,
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": true,
     "show_parameter_hints": true,
     "show_other_hints": true,

@@ -4,6 +4,7 @@
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
       "space a": "workspace::ToggleRightDock",
+      "space t t": "theme::ToggleMode",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
