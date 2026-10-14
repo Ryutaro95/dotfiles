@@ -12,6 +12,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-mini/mini.pairs" },
     { src = "https://github.com/nvim-mini/mini.surround" },
     { src = "https://github.com/nvim-mini/mini.cursorword" },
+    { src = "https://github.com/jake-stewart/multicursor.nvim", version = "1.0" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/b0o/incline.nvim" },
     { src = "https://github.com/folke/tokyonight.nvim" },

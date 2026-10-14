@@ -19,6 +19,9 @@
   //   "version": "2"
   // },
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
     "antigravity-acp": {
       "type": "registry"
     },
