@@ -8,6 +8,7 @@ require('nvim-treesitter').install({
     "gomod",
     "gosum",
     "rust",
+    "zig",
     "nix",
     "typescript",
     "tsx",

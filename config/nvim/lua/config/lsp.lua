@@ -8,6 +8,7 @@ vim.lsp.config("basedpyright", require("lsp.basedpyright"))
 vim.lsp.config("svelte", require("lsp.svelte"))
 vim.lsp.config("yamlls", require("lsp.yamlls"))
 vim.lsp.config("ruby_lsp", require("lsp.ruby_lsp"))
+vim.lsp.config("zls", require("lsp.zls"))
 
 vim.lsp.enable({
 	"gopls",
@@ -20,6 +21,7 @@ vim.lsp.enable({
 	"svelte",
 	"yamlls",
 	"ruby_lsp",
+	"zls",
 })
 
 vim.diagnostic.config({
