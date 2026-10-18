@@ -67,5 +67,39 @@
     "bindings": {
       "j k": "vim::NormalBefore" // In insert mode, make jk escape to normal mode.
     }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-f4": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-w": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-f4": "workspace::CloseActiveDock"
+    }
   }
 ]

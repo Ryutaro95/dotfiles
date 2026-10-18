@@ -44,6 +44,20 @@ keymap:
       CapsLock-Comma: C-PageUp
       CapsLock-Dot: C-PageDown
 
+  # IDEより先にマッチさせるため、Zed editorをIDEの前に置く
+  - name: Zed editor
+    application:
+      only:
+        - dev.zed.Zed
+    remap:
+      CapsLock-h: Shift-Ctrl-Alt-h
+      CapsLock-j: Shift-Ctrl-Alt-j
+      CapsLock-l: Shift-Ctrl-Alt-l
+      CapsLock-t: Shift-Ctrl-Alt-t
+      CapsLock-slash: Shift-Ctrl-Alt-slash
+      CapsLock-Comma: C-Shift-Tab
+      CapsLock-Dot: C-Tab
+
   - name: IDE
     application:
       only:
@@ -62,17 +76,6 @@ keymap:
       CapsLock-t: C-t
       CapsLock-Comma: C-Comma
       CapsLock-Dot: C-Dot
-
-  - name: Zed editor
-    application:
-      only:
-        - dev.zed.Zed
-    remap:
-      CapsLock-h: Shift-Ctrl-Alt-h
-      CapsLock-j: Shift-Ctrl-Alt-j
-      CapsLock-l: Shift-Ctrl-Alt-l
-      CapsLock-t: Shift-Ctrl-Alt-t
-      CapsLock-slash: Shift-Ctrl-Alt-slash
 
   - remap: # 共通
       CapsLock-p: Up
