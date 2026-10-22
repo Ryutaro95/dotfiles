@@ -12,11 +12,16 @@
   "$schema": "https://vicinae.com/schemas/config.json",
   "font": {
     "normal": {
-      "size": 12
+      "size": 11
+    }
+  },
+  "theme": {
+    "dark": {
+      "name": "tokyo-night"
     }
   },
   "launcher_window": {
-    "opacity": 0.8
+    "opacity": 0.96
   },
   "providers": {
     "scripts": {
