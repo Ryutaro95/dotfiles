@@ -66,11 +66,12 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "JetBrains Dark",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_fallbacks": ["Noto Sans CJK JP"],
   "tabs": {
     "file_icons": true,
     "git_status": true,
@@ -78,7 +79,7 @@
   // "git_status": true,
   "terminal": {
     "font_size": 14.0,
-    "font_family": "JetBrainsMono Nerd Font",
+    "font_family": "JetBrainsMonoNL Nerd Font",
   },
   "project_panel": {
     "dock": "left",
