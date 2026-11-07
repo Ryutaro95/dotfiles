@@ -14,7 +14,7 @@ keymap:
       only:
         - com.mitchellh.ghostty
         - com.system76.CosmicTerm
-        - rio
+        - foot
     remap:
       CapsLock-k: C-k
       CapsLock-LeftBrace: Esc
