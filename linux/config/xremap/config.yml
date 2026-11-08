@@ -12,8 +12,6 @@ keymap:
   - name: Terminal系
     application:
       only:
-        - com.mitchellh.ghostty
-        - com.system76.CosmicTerm
         - foot
     remap:
       CapsLock-k: C-k
