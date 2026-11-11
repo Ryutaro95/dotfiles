@@ -3,7 +3,7 @@ vim.lsp.config("lua_ls", require("lsp.lua_ls"))
 vim.lsp.config("rust-analyzer", require("lsp.rust_analyzer"))
 vim.lsp.config("intelephense", require("lsp.intelephense"))
 vim.lsp.config("nixd", require("lsp.nixd"))
-vim.lsp.config("ts_ls", require("lsp.ts_ls"))
+vim.lsp.config("tsc", require("lsp.tsc"))
 vim.lsp.config("basedpyright", require("lsp.basedpyright"))
 vim.lsp.config("svelte", require("lsp.svelte"))
 vim.lsp.config("yamlls", require("lsp.yamlls"))
@@ -16,7 +16,7 @@ vim.lsp.enable({
 	"rust-analyzer",
 	"intelephense",
 	"nixd",
-	"ts_ls",
+	"tsc",
 	"basedpyright",
 	"svelte",
 	"yamlls",

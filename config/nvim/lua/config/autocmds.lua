@@ -86,6 +86,21 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- カーソル行番号はテーマのNumberの文字色で太字にする
+local function set_cursor_line_number_highlight()
+    local number = vim.api.nvim_get_hl(0, { name = "Number", link = false })
+    local cursor_line_nr = vim.api.nvim_get_hl(0, { name = "CursorLineNr", link = false })
+    cursor_line_nr.fg = number.fg
+    cursor_line_nr.bold = true
+    vim.api.nvim_set_hl(0, "CursorLineNr", cursor_line_nr)
+end
+
+set_cursor_line_number_highlight()
+vim.api.nvim_create_autocmd("ColorScheme", {
+    group = vim.api.nvim_create_augroup("CursorLineNumberHighlight", { clear = true }),
+    callback = set_cursor_line_number_highlight,
+})
+
 -- quickfixの背景をエディタより暗くする(カラースキーム変更のたびに追従)
 local function darken_hex(hex, amount)
     local r = tonumber(hex:sub(2, 3), 16)
