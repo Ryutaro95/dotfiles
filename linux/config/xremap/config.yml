@@ -30,8 +30,8 @@ keymap:
       CapsLock-l: C-l
       CapsLock-o: C-o
       CapsLock-Shift-x: C-Shift-x
-      CapsLock-Comma: C-M-b
-      CapsLock-Dot: C-M-n
+      CapsLock-Comma: C-Comma
+      CapsLock-Dot: C-Dot
   - name: ブラウザ系
     application:
       only:
@@ -60,7 +60,7 @@ keymap:
     application:
       only:
         - dev.zed.Zed
-        - obsidian
+        - md.obsidian.Obsidian
         - code
     remap:
       CapsLock-LeftBrace: Esc
