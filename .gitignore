@@ -2,6 +2,9 @@
 Brewfile.lock.json
 .config/nvim/lazy-lock.json
 
+# Neovim runtime log
+/nvim.log
+
 # fcitx5 generated keyboard layout cache
 /linux/config/fcitx5/conf/cached_layouts
 
