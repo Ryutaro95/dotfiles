@@ -24,7 +24,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias ll="eza -alF --icons"
 alias cat="bat -p"
 alias cd="z"
-alias dc"docker"
 alias dc="docker compose"
 alias lg="lazygit"
 alias ld="lazydocker"
