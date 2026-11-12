@@ -18,6 +18,25 @@
   //   },
   //   "version": "2"
   // },
+  "git": {
+    "diff_base": "head"
+  },
+  "debugger": {
+    "button": false
+  },
+  "status_bar": {
+    "active_language_button": false,
+    "cursor_position_button": false
+  },
+  "search": {
+    "button": false
+  },
+  "global_lsp_settings": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
   "agent_servers": {
     "codex-acp": {
       "type": "registry"
@@ -40,6 +59,7 @@
     "dock": "left",
   },
   "collaboration_panel": {
+    "button": false,
     "dock": "left",
   },
   "agent": {
@@ -66,7 +86,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "JetBrains Dark",
+    "dark": "One Dark",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",

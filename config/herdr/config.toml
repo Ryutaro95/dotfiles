@@ -1,4 +1,9 @@
 onboarding = false
+
+[terminal]
+# Keep new panes on zsh even if the persistent server inherited an old SHELL.
+default_shell = "/opt/homebrew/bin/zsh"
+
 [keys]
 prefix = "ctrl+space"
 zoom = "prefix+m"       # legacy alias: fullscreen

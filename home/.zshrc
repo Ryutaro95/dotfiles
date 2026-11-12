@@ -1,63 +1,51 @@
-# PATH
-export PATH="/opt/homebrew/bin:$PATH"
-export LANG=ja_JP.UTF-8
+source "$HOME/.config/zsh/env.zsh"
 
-# Go
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
+setopt EXTENDED_HISTORY SHARE_HISTORY HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_FCNTL_LOCK
+setopt INTERACTIVE_COMMENTS
 
-# Rust
-export PATH="$PATH:$HOME/.cargo/bin"
+# Emacs-style editing
+bindkey -e
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[[3~' delete-char
 
-# Editor aliases
-if command -v nvim &>/dev/null; then
-    alias vim=nvim
+typeset -U fpath
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Alias
+alias ll="eza -alF --icons"
+alias cat="bat -p"
+alias cd="z"
+alias dc"docker"
+alias dc="docker compose"
+alias lg="lazygit"
+alias ld="lazydocker"
+alias tf="terraform"
+alias hr="herdr"
+
+source "$HOME/.config/zsh/functions.zsh"
+
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init zsh)"
 fi
-
-# File listing aliases
-if command -v eza &>/dev/null; then
-    alias ll='eza -alF --icons'
-    alias tree='eza -alF --icons -T'
-else
-    alias ll='ls -alF'
+if (( $+commands[fzf] )); then
+    source <(fzf --zsh)
 fi
-
-# Cat alternative
-if command -v bat &>/dev/null; then
-    alias cat='bat -p'
-fi
-
-# Docker aliases
-alias dc='docker compose'
-
-# Terminal multiplexer
-alias tm=tmux
-
-# Lazygit / Lazydocker
-if command -v lazygit &>/dev/null; then
-    alias lg=lazygit
-fi
-if command -v lazydocker &>/dev/null; then
-    alias ld=lazydocker
-fi
-
-# rbenv
-if command -v rbenv &>/dev/null; then
-    eval "$(rbenv init - zsh)"
-fi
-
-# Starship
-if command -v starship &>/dev/null; then
+if (( $+commands[starship] )); then
     eval "$(starship init zsh)"
 fi
 
-# zoxide
-if command -v zoxide &>/dev/null; then
-    eval "$(zoxide init zsh)"
-    alias cd=z
+if [[ -r /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
-
-
-
-# Added by Antigravity CLI installer
-export PATH="/Users/ryutaro/.local/bin:$PATH"
+if [[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
