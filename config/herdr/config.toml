@@ -5,6 +5,8 @@ onboarding = false
 default_shell = "/opt/homebrew/bin/zsh"
 
 [keys]
+# Use prefix+o for Navigator instead of opening notification targets.
+open_notification_target = ""
 prefix = "ctrl+space"
 zoom = "prefix+m"       # legacy alias: fullscreen
 navigate_workspace_up = "k"
@@ -45,3 +47,9 @@ key = ["alt+9", "cmd+9"]
 type = "shell"
 command = "herdr tab focus \"$(herdr tab list | jq -r '.result.tabs as $t | ($t[] | select(.focused) | .workspace_id) as $ws | [$t[] | select(.workspace_id==$ws)] | max_by(.label|tonumber) | .tab_id')\""
 description = "Focus last tab in current workspace"
+
+[[keys.command]]
+key = "prefix+o"
+type = "shell"
+command = "/opt/homebrew/bin/herdr plugin pane open --plugin session-navigator --entrypoint navigator --focus"
+description = "Open Herdr Session Navigator"
